@@ -1,0 +1,26 @@
+<annotation>
+  <folder>input</folder>
+  <filename>10aa0c694d64e837106d805d5c5817d0.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\10aa0c694d64e837106d805d5c5817d0.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>236</width>
+    <height>354</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>latin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>19</xmin>
+      <ymin>91</ymin>
+      <xmax>212</xmax>
+      <ymax>197</ymax>
+    </bndbox>
+  </object>
+</annotation>

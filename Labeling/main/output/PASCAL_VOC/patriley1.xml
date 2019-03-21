@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>patriley1.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\patriley1.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>600</width>
+    <height>315</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>

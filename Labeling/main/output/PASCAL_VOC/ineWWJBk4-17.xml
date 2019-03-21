@@ -1,0 +1,26 @@
+<annotation>
+  <folder>input</folder>
+  <filename>ineWWJBk4-17.jpg</filename>
+  <path>/Users/squidpurin/Documents/Labeling/OpenLabeling-master/main/input/ineWWJBk4-17.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>606</width>
+    <height>905</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>inuktitut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>74</xmin>
+      <ymin>76</ymin>
+      <xmax>482</xmax>
+      <ymax>147</ymax>
+    </bndbox>
+  </object>
+</annotation>

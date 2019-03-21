@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>peacepilgrim1.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\peacepilgrim1.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>600</width>
+    <height>315</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>

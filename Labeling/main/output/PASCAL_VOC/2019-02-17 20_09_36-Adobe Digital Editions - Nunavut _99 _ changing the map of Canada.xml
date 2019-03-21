@@ -1,0 +1,38 @@
+<annotation>
+  <folder>input</folder>
+  <filename>2019-02-17 20_09_36-Adobe Digital Editions - Nunavut '99 _ changing the map of Canada.png</filename>
+  <path>E:\Studium\Universitat\2019-1\TSP\Tools\OpenLabeling-master\main\input\2019-02-17 20_09_36-Adobe Digital Editions - Nunavut '99 _ changing the map of Canada.png</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>405</width>
+    <height>401</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>latin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>17</xmin>
+      <ymin>215</ymin>
+      <xmax>319</xmax>
+      <ymax>389</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>inuktitut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>18</xmin>
+      <ymin>25</ymin>
+      <xmax>378</xmax>
+      <ymax>159</ymax>
+    </bndbox>
+  </object>
+</annotation>
