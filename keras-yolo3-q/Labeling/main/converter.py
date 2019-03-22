@@ -3,17 +3,17 @@ import numpy as np
 
 def main():
     direc = "./output/YOLO_darknet/"
-    filem = open("output.txt", "a")
+    filem = open("trainh.txt", "a")
     for root, dirs, files in os.walk(direc):
         for filename in files:
-            newfn = "./input/in_conv/" + filename[:-3] + 'jpg'
+            newfn = "input/in_conv/" + filename[:-3] + 'jpg'
             img = cv2.imread(newfn, cv2.IMREAD_COLOR)
             if img.__class__.__name__ != "NoneType":
                 file = open(direc + filename, "r")
                 count = 0
                 for line in file:
                     if count == 0:
-                        filem.write(newfn + " ")
+                        filem.write("./Labeling/main/" + newfn + " ")
                         count += 1
                     h = img.shape[0]
                     w = img.shape[1]
@@ -33,5 +33,11 @@ def main():
                 file.close()
                 filem.write('\n')
     filem.close()
-
+    with open('trainh.txt') as infile, open('train.txt', 'w') as outfile:
+        for line in infile:
+            if not line.strip(): continue  # skip the empty line
+            outfile.write(line)  # non-empty line. Write it to output
+    infile.close()
+    outfile.close()
+    
 main()

@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>image_681x432_from_1631,716_to_2449,1235.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\image_681x432_from_1631,716_to_2449,1235.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>680</width>
+    <height>432</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>

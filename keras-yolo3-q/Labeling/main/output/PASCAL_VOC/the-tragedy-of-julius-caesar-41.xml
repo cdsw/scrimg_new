@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>the-tragedy-of-julius-caesar-41.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\the-tragedy-of-julius-caesar-41.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>650</width>
+    <height>779</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>

@@ -36,10 +36,16 @@ def rand(a=0, b=1):
 def get_random_data(annotation_line, input_shape, random=True, max_boxes=20, jitter=.3, hue=.1, sat=1.5, val=1.5, proc_img=True):
     '''random preprocessing for real-time data augmentation'''
     line = annotation_line.split()
+    #print(line[0][30:50])
     image = Image.open(line[0])
     iw, ih = image.size
     h, w = input_shape
-    box = np.array([np.array(list(map(int,box.split(',')))) for box in line[1:]])
+    for box in line[1:]:
+        try:
+            box = np.array([np.array(list(map(int,box.split(','))))])
+            #print(box)
+        except:
+            box = np.array([np.array(list(map(int,"0,0,0,0,0".split(','))))])
 
     if not random:
         # resize image

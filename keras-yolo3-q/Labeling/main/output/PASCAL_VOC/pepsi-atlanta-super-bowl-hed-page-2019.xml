@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>pepsi-atlanta-super-bowl-hed-page-2019.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\pepsi-atlanta-super-bowl-hed-page-2019.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>1320</width>
+    <height>660</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>

@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>shakespeare-quotes1-min-450x450.jpg</filename>
+  <path>C:\Users\defaultuser0\Desktop\OpenLabeling-master\main\input\shakespeare-quotes1-min-450x450.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>450</width>
+    <height>450</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>
