@@ -1,0 +1,14 @@
+<annotation>
+  <folder>input</folder>
+  <filename>X00074_Inuk86.jpg</filename>
+  <path>/Users/squidpurin/Documents/GitHub/scrimg_new/keras-yolo3-q/Labeling/input/X00074_Inuk86.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>352</width>
+    <height>352</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+</annotation>
