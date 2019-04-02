@@ -21,8 +21,8 @@ def _main():
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
     anchors = get_anchors(anchors_path)
-
-    input_shape = (416,416) # multiple of 32, hw
+    img_sh = 352
+    input_shape = (img_sh,img_sh) # multiple of 32, hw
 
     is_tiny_version = len(anchors)==6 # default setting
     if is_tiny_version:
