@@ -11,4 +11,40 @@
     <depth>3</depth>
   </size>
   <segmented>0</segmented>
+  <object>
+    <name>latin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>16</xmin>
+      <ymin>160</ymin>
+      <xmax>140</xmax>
+      <ymax>172</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>latin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>16</xmin>
+      <ymin>172</ymin>
+      <xmax>155</xmax>
+      <ymax>182</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>latin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>15</xmin>
+      <ymin>182</ymin>
+      <xmax>38</xmax>
+      <ymax>194</ymax>
+    </bndbox>
+  </object>
 </annotation>

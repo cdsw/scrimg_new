@@ -21,8 +21,9 @@ def _main():
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
     anchors = get_anchors(anchors_path)
-
-    input_shape = (416,416) # multiple of 32, hw
+    img_sz = 352
+    
+    input_shape = (img_sz,img_sz) # multiple of 32, hw
 
     model, bottleneck_model, last_layer_model = create_model(input_shape, anchors, num_classes,
             freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze

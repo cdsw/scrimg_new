@@ -11,4 +11,40 @@
     <depth>3</depth>
   </size>
   <segmented>0</segmented>
+  <object>
+    <name>inuktitut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>20</ymin>
+      <xmax>291</xmax>
+      <ymax>35</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>inuktitut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>11</xmin>
+      <ymin>35</ymin>
+      <xmax>314</xmax>
+      <ymax>51</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>inuktitut</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>10</xmin>
+      <ymin>50</ymin>
+      <xmax>116</xmax>
+      <ymax>67</ymax>
+    </bndbox>
+  </object>
 </annotation>
