@@ -22,8 +22,8 @@ class YOLO(object):
     grid = 11
     _defaults = {
         "model_path": 'model_data/yolo.h5',
-        "anchors_path": 'model_data/yolo_anchors.txt',
-        "classes_path": 'model_data/coco_classes.txt',
+        "anchors_path": 'model_data/scrimg_anchors.txt',
+        "classes_path": 'model_data/scrimg_classes.txt',
         "score" : 0.10, #threshold
         "iou" : 0.45,
         "model_image_size" : (32 * grid, 32 * grid),
