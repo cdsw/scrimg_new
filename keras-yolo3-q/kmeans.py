@@ -57,8 +57,9 @@ class YOLO_Kmeans:
 
         return clusters
 
+        
     def result2txt(self, data):
-        f = open("scrimg_anchors.txt", 'w')
+        f = open("./model_data/scrimg_anchors.txt", 'w')
         row = np.shape(data)[0]
         for i in range(row):
             if i == 0:
@@ -96,6 +97,6 @@ class YOLO_Kmeans:
 
 if __name__ == "__main__":
     cluster_number = 6 #tiny yolo
-    filename = "train.txt"
+    filename = "Labeling/scrimg_train.txt"
     kmeans = YOLO_Kmeans(cluster_number, filename)
     kmeans.txt2clusters()

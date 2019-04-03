@@ -14,7 +14,7 @@ from yolo3.utils import get_random_data
 
 
 def _main():
-    annotation_path = 'scrimg_train.txt'
+    annotation_path = 'Labeling/scrimg_train.txt'
     log_dir = 'logs/'
     classes_path = 'model_data/scrimg_classes.txt'
     anchors_path = 'model_data/scrimg_anchors.txt'
