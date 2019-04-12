@@ -18,7 +18,7 @@ def _main():
     log_dir = 'logs/'
     classes_path = 'model_data/scrimg_classes.txt'
     anchors_path = 'model_data/scrimg_anchors.txt'
-    model_path = 'model_data/yolo-tiny.h5'
+    model_path = 'model_data/yolo--.h5'
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
     anchors = get_anchors(anchors_path)
@@ -50,8 +50,8 @@ def _main():
 
     # Train with frozen layers first, to get a stable loss.
     # Adjust num epochs to your dataset. This step is enough to obtain a not bad model.
-    num_epoch_init = 30;
-    num_epoch = 60;
+    num_epoch_init = 50
+    num_epoch = 75
     if True:
         model.compile(optimizer=Adam(lr=1e-3), loss={
             # use custom yolo_loss Lambda layer.
