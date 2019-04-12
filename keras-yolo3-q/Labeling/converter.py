@@ -1,5 +1,4 @@
 import os, cv2
-import numpy as np
 
 def main():
     direc = "./output/YOLO_darknet/"

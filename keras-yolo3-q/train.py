@@ -18,7 +18,7 @@ def _main():
     log_dir = 'logs/'
     classes_path = 'model_data/scrimg_classes.txt'
     anchors_path = 'model_data/scrimg_anchors.txt'
-    model_path = 'model_data/yolo--.h5'
+    model_path = 'model_data/yolo.h5'
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
     anchors = get_anchors(anchors_path)
