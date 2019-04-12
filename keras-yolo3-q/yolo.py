@@ -24,7 +24,7 @@ class YOLO(object):
         "model_path": 'model_data/yolo.h5',
         "anchors_path": 'model_data/scrimg_anchors.txt',
         "classes_path": 'model_data/scrimg_classes.txt',
-        "score" : 0.009, #threshold
+        "score" : 0.03, #threshold
         "iou" : 0.45,
         "model_image_size" : (32 * grid, 32 * grid),
         "gpu_num" : 1,
