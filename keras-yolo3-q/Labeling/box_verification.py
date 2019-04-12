@@ -1,4 +1,4 @@
-import cv2
+import cv2, os
 
 def draw_rectangle(box, img):
     xmin, ymin, xmax, ymax, cid = int(box[0]), int(box[1]), int(box[2]), int(box[3]), int(box[4])
@@ -10,7 +10,7 @@ def draw_rectangle(box, img):
         color = (255,0,0)
     cv2.rectangle(img, (xmin, ymin), (xmax, ymax), color, thickness=3)
 
-def main():
+def from_train():
     filem = open("scrimg_train.txt", "r")
     for line in filem:
         line = line.strip()
@@ -25,9 +25,8 @@ def main():
             for box in boxes:
                 box = box.split(',')
                 draw_rectangle(box, img)
-            print("verif/" + location)
             cv2.imwrite("verif/"+location[5:], img)
     filem.close()
 
+from_train()
 
-main()
