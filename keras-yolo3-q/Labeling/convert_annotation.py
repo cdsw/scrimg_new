@@ -2,7 +2,7 @@ import os, cv2
 
 def main():
     direc = "./output/YOLO_darknet/"
-    filem = open("trainh.txt", "a")
+    fil = open("E:/trainm.txt", "a")
     for root, dirs, files in os.walk(direc):
         for filename in files:
             newfn = "input/" + filename[:-3] + 'jpg'
@@ -12,7 +12,7 @@ def main():
                 count = 0
                 for line in file:
                     if count == 0:
-                        filem.write("./Labeling/" + newfn + " ")
+                        fil.write("./Labeling/" + newfn + " ")
                         count += 1
                     h = img.shape[0]
                     w = img.shape[1]
@@ -28,16 +28,16 @@ def main():
                     ymax = int((by+bh)*h)
                     m = str(xmin) + "," + str(ymin) + "," + \
                         str(xmax) + "," + str(ymax) + "," + cls + ' '
-                    filem.write(m)
+                    fil.write(m)
                 file.close()
-                filem.write('\n')
-    filem.close()
-    with open('trainh.txt') as infile, open('scrimg_train.txt', 'w') as outfile:
+                fil.write('\n')
+    fil.close()
+    with open('E:/trainm.txt') as infile, open('E:/scrimg_train_.txt', 'w') as outfile:
         for line in infile:
             if not line.strip(): continue  # skip the empty line
             outfile.write(line)  # non-empty line. Write it to output
     infile.close()
     outfile.close()
-    os.remove("trainh.txt")
+    os.remove("E:/trainm.txt")
     
 main()

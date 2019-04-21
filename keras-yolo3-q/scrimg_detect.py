@@ -6,18 +6,31 @@ import os
 
 def detect_img(yolo):
     path = "./Labeling/input/"
+    imgCount = 0
+    total_accuracy = 0
     for r, d, f in os.walk(path):
         for img in f:
-            #print(img)
             try:
                 image = Image.open(path + img)
+                imgCount += 1
             except:
                 print('Open Error! Try again!')
                 continue
             else:
-                r_image = yolo.detect_image(image)
+                # Temporary
+                c = ''
+                if img[7] == 'L':
+                    c = 'latin'
+                elif img[7] == 'I':
+                    c = 'inuktitut'
+                elif img[7] == 'T':
+                    c = 'thai'
+                r_image, accuracy = yolo.detect_image(image, c)
                 #r_image.show()
                 r_image.save( './out/' + img, 'PNG' )
+                print("acc: " + str(accuracy) + " tot: " + str(total_accuracy) + " img ct " + str(imgCount))
+                total_accuracy += accuracy
+    print("TOTAL_ACCURACY = " + str(total_accuracy/imgCount))
     yolo.close_session()
 
 FLAGS = None

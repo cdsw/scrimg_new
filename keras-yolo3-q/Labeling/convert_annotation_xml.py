@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 def main():
     direc = "./output/PASCAL_VOC/"
-    filem = open("trainhxml.txt", "a")
+    filem = open("scrimg_train.txt", "a")
     for root, dirs, files in os.walk(direc):
         for filename in files:
             newfn = "input/" + filename[:-3] + 'jpg'

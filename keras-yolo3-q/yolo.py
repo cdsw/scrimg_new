@@ -100,7 +100,7 @@ class YOLO(object):
                 score_threshold=self.score, iou_threshold=self.iou)
         return boxes, scores, classes
 
-    def detect_image(self, image):
+    def detect_image(self, image, cls_test = ''):
         start = timer()
 
         if self.model_image_size != (None, None):
@@ -131,6 +131,11 @@ class YOLO(object):
                     size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
         thickness = (image.size[0] + image.size[1]) // 300
 
+        # Accuracy utility
+        total_conf = {}
+        for cls in self.class_names:
+            total_conf[cls] = 0
+
         for i, c in reversed(list(enumerate(out_classes))):
             predicted_class = self.class_names[c]
             box = out_boxes[i]
@@ -139,6 +144,8 @@ class YOLO(object):
             label = '{} {:.2f}'.format(predicted_class, score)
             draw = ImageDraw.Draw(image)
             label_size = draw.textsize(label, font)
+            # Accuracy
+            total_conf[predicted_class] += score
 
             top, left, bottom, right = box
             top = max(0, np.floor(top + 0.5).astype('int32'))
@@ -165,7 +172,19 @@ class YOLO(object):
 
         end = timer()
         print(end - start)
-        return image
+
+        accuracy = None
+        # Accuracy
+        if cls_test != '':
+            target_conf = total_conf[cls_test]
+            sum_conf = 0
+            for item in total_conf:
+                sum_conf += total_conf[item]
+            try:
+                accuracy = target_conf/sum_conf
+            except ZeroDivisionError:
+                accuracy = 0
+        return image, accuracy
 
     def close_session(self):
         self.sess.close()
