@@ -35,5 +35,18 @@ def detect_img(yolo):
 
 FLAGS = None
 
+def detect_img_one(yolo):
+    path = input("Input image location: ")
+    try:
+        image = Image.open(path)
+    except:
+        print('Open Error! Try again!')
+    else:
+        r_image, accuracy = yolo.detect_image(image)
+        #r_image.show()
+        r_image.save( './out/' + path, 'PNG' )
+    yolo.close_session()
+
 if __name__ == '__main__':
-    detect_img(YOLO())
+    #detect_img(YOLO())
+    detect_img_one(YOLO())
