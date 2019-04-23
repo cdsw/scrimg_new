@@ -2,9 +2,7 @@ import re
 import cv2
 import os
 
-def main():
-    countoffset = 0
-
+def initialisePaths():
     if not os.path.exists( "./input/" ):
         os.makedirs( "./input/" )
     if not os.path.exists( "./output/" ):
@@ -17,6 +15,11 @@ def main():
         newfile = open( "imgcount.txt", "a" )
         newfile.write("0")
         newfile.close()
+
+def main():
+    initialisePaths()
+
+    countoffset = 0
 
     with open( 'imgcount.txt', 'r' ) as fp:
         imgcount = int(fp.read())

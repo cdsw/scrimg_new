@@ -1,591 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0b18a5-348e-4631-a177-9375e13b26ad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00000_Latin108.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00001_Latin58.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00002_Latin70.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00003_Latin120.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00004_Latin64.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00005_Inuk55.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00006_Inuk41.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00007_Inuk69.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00008_Inuk96.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00009_Inuk162.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00010_Inuk82.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00011_Inuk83.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00012_Inuk163.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00013_Inuk97.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00014_Inuk68.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00015_Inuk40.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00016_Inuk54.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00017_Latin121.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00018_Latin65.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00019_Latin71.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00020_Latin59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00021_Latin109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00022_Latin98.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00023_Latin8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00024_Latin67.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00025_Latin123.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00026_Latin73.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00027_Inuk42.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00028_Inuk56.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00029_Inuk81.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00030_Inuk95.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00031_Inuk161.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00032_Inuk149.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00033_Inuk148.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00034_Inuk160.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00035_Inuk94.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00036_Inuk80.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00037_Inuk57.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00038_Inuk43.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00039_Latin72.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00040_Latin66.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00041_Latin122.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00042_Latin9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00043_Latin99.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00044_Latin89.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00045_Latin126.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00046_Latin62.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00047_Latin76.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00048_Inuk47.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00049_Inuk53.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00050_Inuk158.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00051_Inuk84.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00052_Inuk8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00053_Inuk90.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00054_Inuk9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00055_Inuk91.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00056_Inuk85.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00057_Inuk159.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00058_Inuk52.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00059_Inuk46.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00060_Latin77.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00061_Latin127.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00062_Latin63.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00063_Latin88.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00064_Latin75.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00065_Latin61.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00066_Latin125.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00067_Latin49.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00068_Latin119.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00069_Inuk78.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00070_Inuk50.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00071_Inuk44.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00072_Inuk93.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00073_Inuk87.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00074_Inuk86.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00075_Inuk92.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00076_Inuk45.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00077_Inuk51.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00078_Inuk79.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00079_Latin118.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00080_Latin48.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00081_Latin60.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00082_Latin124.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00083_Latin74.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00084_Latin13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00085_Inuk36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00086_Inuk22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00087_Inuk101.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00088_Inuk115.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00089_Inuk129.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00090_Inuk128.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00091_Inuk114.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00092_Inuk100.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00093_Inuk23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00094_Inuk37.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00095_Latin12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00096_Latin38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00097_Latin10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00098_Inuk21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00099_Inuk35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00100_Inuk116.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00101_Inuk102.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00102_Inuk103.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00103_Inuk117.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00104_Inuk34.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00105_Inuk20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00106_Latin11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00107_Latin39.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00108_Latin15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00109_Latin29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00110_Inuk18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00111_Inuk24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00112_Inuk30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00113_Inuk113.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00114_Inuk107.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00115_Inuk106.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00116_Inuk112.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00117_Inuk31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00118_Inuk25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00119_Inuk19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00120_Latin28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00121_Latin14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00122_Latin16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00123_Inuk33.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00124_Inuk27.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00125_Inuk138.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00126_Inuk104.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00127_Inuk110.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00128_Inuk111.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00129_Inuk105.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00130_Inuk139.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00131_Inuk26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00132_Inuk32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00133_Latin17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00134_Latin32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00135_Latin26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00136_Inuk17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00137_Inuk120.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00138_Inuk134.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00139_Inuk108.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00140_Inuk109.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00141_Inuk135.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00142_Inuk121.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00143_Inuk16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00144_Latin27.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00145_Latin33.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00146_Latin19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00147_Latin25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00148_Latin31.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00149_Inuk14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00150_Inuk28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00151_Inuk137.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00152_Inuk123.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00153_Inuk122.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00154_Inuk136.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00155_Inuk29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00156_Inuk15.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00157_Latin30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00158_Latin24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00159_Latin18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00160_Latin20.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00161_Latin34.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00162_Inuk39.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00163_Inuk11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00164_Inuk132.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00165_Inuk126.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00166_Inuk127.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00167_Inuk133.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00168_Inuk10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00169_Inuk38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00170_Latin35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00171_Latin21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00172_Latin37.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00173_Latin23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00174_Inuk12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00175_Inuk119.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00176_Inuk125.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00177_Inuk131.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00178_Inuk130.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00179_Inuk124.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00180_Inuk118.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00181_Inuk13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00182_Latin22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00183_Latin36.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00184_Latin2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00185_Latin92.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00186_Latin86.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00187_Latin129.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00188_Latin79.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00189_Latin51.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00190_Latin115.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00191_Latin101.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00192_Latin45.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00193_Inuk74.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00194_Inuk60.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00195_Inuk48.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00196_Inuk143.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00197_Inuk157.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00198_Inuk7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00199_Inuk6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00200_Inuk156.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00201_Inuk142.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00202_Inuk49.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00203_Inuk61.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00204_Inuk75.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00205_Latin100.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00206_Latin44.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00207_Latin50.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00208_Latin114.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00209_Latin78.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00210_Latin128.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00211_Latin87.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00212_Latin93.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00213_Latin3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00214_Latin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00215_Latin85.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00216_Latin91.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00217_Latin46.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00218_Latin102.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00219_Latin116.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00220_Latin52.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00221_Inuk63.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00222_Inuk77.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00223_Inuk154.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00224_Inuk140.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00225_Inuk4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00226_Inuk88.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00227_Inuk89.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00228_Inuk5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00229_Inuk141.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00230_Inuk155.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00231_Inuk76.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00232_Inuk62.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00233_Latin117.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00234_Latin53.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00235_Latin47.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00236_Latin103.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00237_Latin90.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00238_Latin84.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00239_Latin80.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00240_Latin94.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00241_Latin4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00242_Latin107.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00243_Latin43.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00244_Latin57.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00245_Latin113.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00246_Inuk66.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00247_Inuk72.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00248_Inuk99.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00249_Inuk1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00250_Inuk151.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00251_Inuk145.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00252_Inuk144.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00253_Inuk150.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00254_Inuk98.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00255_Inuk73.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00256_Inuk67.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00257_Latin56.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00258_Latin112.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00259_Latin106.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00260_Latin42.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00261_Latin5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00262_Latin95.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00263_Latin81.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00264_Latin97.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00265_Latin83.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00266_Latin7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00267_Latin110.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00268_Latin54.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00269_Latin40.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00270_Latin104.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00271_Latin68.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00272_Inuk59.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00273_Inuk71.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00274_Inuk65.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00275_Inuk2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00276_Inuk146.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00277_Inuk152.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00278_Inuk153.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00279_Inuk147.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00280_Inuk3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00281_Inuk64.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00282_Inuk70.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00283_Inuk58.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00284_Latin69.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00285_Latin41.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00286_Latin105.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00287_Latin111.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00288_Latin55.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00289_Latin6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00290_Latin82.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/PASCAL_VOC/X00291_Latin96.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00000_Latin108.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00001_Latin58.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00002_Latin70.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00003_Latin120.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00004_Latin64.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00005_Inuk55.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00006_Inuk41.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00007_Inuk69.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00008_Inuk96.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00009_Inuk162.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00010_Inuk82.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00011_Inuk83.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00012_Inuk163.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00013_Inuk97.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00014_Inuk68.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00015_Inuk40.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00016_Inuk54.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00017_Latin121.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00018_Latin65.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00019_Latin71.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00020_Latin59.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00021_Latin109.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00022_Latin98.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00023_Latin8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00024_Latin67.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00025_Latin123.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00026_Latin73.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00027_Inuk42.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00028_Inuk56.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00029_Inuk81.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00030_Inuk95.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00031_Inuk161.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00032_Inuk149.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00033_Inuk148.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00034_Inuk160.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00035_Inuk94.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00036_Inuk80.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00037_Inuk57.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00038_Inuk43.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00039_Latin72.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00040_Latin66.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00041_Latin122.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00042_Latin9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00043_Latin99.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00044_Latin89.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00045_Latin126.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00046_Latin62.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00047_Latin76.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00048_Inuk47.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00049_Inuk53.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00050_Inuk158.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00051_Inuk84.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00052_Inuk8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00053_Inuk90.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00054_Inuk9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00055_Inuk91.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00056_Inuk85.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00057_Inuk159.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00058_Inuk52.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00059_Inuk46.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00060_Latin77.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00061_Latin127.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00062_Latin63.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00063_Latin88.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00064_Latin75.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00065_Latin61.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00066_Latin125.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00067_Latin49.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00068_Latin119.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00069_Inuk78.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00070_Inuk50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00071_Inuk44.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00072_Inuk93.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00073_Inuk87.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00074_Inuk86.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00075_Inuk92.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00076_Inuk45.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00077_Inuk51.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00078_Inuk79.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00079_Latin118.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00080_Latin48.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00081_Latin60.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00082_Latin124.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00083_Latin74.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00084_Latin13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00085_Inuk36.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00086_Inuk22.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00087_Inuk101.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00088_Inuk115.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00089_Inuk129.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00090_Inuk128.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00091_Inuk114.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00092_Inuk100.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00093_Inuk23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00094_Inuk37.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00095_Latin12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00096_Latin38.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00097_Latin10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00098_Inuk21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00099_Inuk35.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00100_Inuk116.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00101_Inuk102.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00102_Inuk103.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00103_Inuk117.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00104_Inuk34.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00105_Inuk20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00106_Latin11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00107_Latin39.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00108_Latin15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00109_Latin29.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00110_Inuk18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00111_Inuk24.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00112_Inuk30.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00113_Inuk113.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00114_Inuk107.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00115_Inuk106.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00116_Inuk112.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00117_Inuk31.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00118_Inuk25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00119_Inuk19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00120_Latin28.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00121_Latin14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00122_Latin16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00123_Inuk33.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00124_Inuk27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00125_Inuk138.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00126_Inuk104.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00127_Inuk110.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00128_Inuk111.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00129_Inuk105.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00130_Inuk139.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00131_Inuk26.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00132_Inuk32.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00133_Latin17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00134_Latin32.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00135_Latin26.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00136_Inuk17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00137_Inuk120.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00138_Inuk134.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00139_Inuk108.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00140_Inuk109.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00141_Inuk135.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00142_Inuk121.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00143_Inuk16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00144_Latin27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00145_Latin33.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00146_Latin19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00147_Latin25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00148_Latin31.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00149_Inuk14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00150_Inuk28.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00151_Inuk137.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00152_Inuk123.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00153_Inuk122.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00154_Inuk136.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00155_Inuk29.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00156_Inuk15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00157_Latin30.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00158_Latin24.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00159_Latin18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00160_Latin20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00161_Latin34.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00162_Inuk39.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00163_Inuk11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00164_Inuk132.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00165_Inuk126.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00166_Inuk127.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00167_Inuk133.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00168_Inuk10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00169_Inuk38.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00170_Latin35.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00171_Latin21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00172_Latin37.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00173_Latin23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00174_Inuk12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00175_Inuk119.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00176_Inuk125.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00177_Inuk131.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00178_Inuk130.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00179_Inuk124.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00180_Inuk118.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00181_Inuk13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00182_Latin22.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00183_Latin36.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00184_Latin2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00185_Latin92.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00186_Latin86.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00187_Latin129.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00188_Latin79.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00189_Latin51.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00190_Latin115.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00191_Latin101.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00192_Latin45.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00193_Inuk74.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00194_Inuk60.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00195_Inuk48.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00196_Inuk143.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00197_Inuk157.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00198_Inuk7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00199_Inuk6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00200_Inuk156.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00201_Inuk142.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00202_Inuk49.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00203_Inuk61.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00204_Inuk75.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00205_Latin100.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00206_Latin44.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00207_Latin50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00208_Latin114.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00209_Latin78.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00210_Latin128.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00211_Latin87.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00212_Latin93.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00213_Latin3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00214_Latin1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00215_Latin85.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00216_Latin91.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00217_Latin46.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00218_Latin102.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00219_Latin116.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00220_Latin52.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00221_Inuk63.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00222_Inuk77.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00223_Inuk154.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00224_Inuk140.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00225_Inuk4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00226_Inuk88.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00227_Inuk89.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00228_Inuk5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00229_Inuk141.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00230_Inuk155.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00231_Inuk76.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00232_Inuk62.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00233_Latin117.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00234_Latin53.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00235_Latin47.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00236_Latin103.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00237_Latin90.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00238_Latin84.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00239_Latin80.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00240_Latin94.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00241_Latin4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00242_Latin107.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00243_Latin43.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00244_Latin57.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00245_Latin113.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00246_Inuk66.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00247_Inuk72.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00248_Inuk99.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00249_Inuk1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00250_Inuk151.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00251_Inuk145.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00252_Inuk144.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00253_Inuk150.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00254_Inuk98.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00255_Inuk73.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00256_Inuk67.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00257_Latin56.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00258_Latin112.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00259_Latin106.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00260_Latin42.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00261_Latin5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00262_Latin95.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00263_Latin81.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00264_Latin97.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00265_Latin83.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00266_Latin7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00267_Latin110.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00268_Latin54.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00269_Latin40.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00270_Latin104.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00271_Latin68.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00272_Inuk59.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00273_Inuk71.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00274_Inuk65.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00275_Inuk2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00276_Inuk146.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00277_Inuk152.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00278_Inuk153.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00279_Inuk147.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00280_Inuk3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00281_Inuk64.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00282_Inuk70.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00283_Inuk58.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00284_Latin69.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00285_Latin41.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00286_Latin105.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00287_Latin111.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00288_Latin55.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00289_Latin6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00290_Latin82.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras-yolo3-q/Labeling/output/YOLO_darknet/X00291_Latin96.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keras-yolo3-q/mokemify/words/latnWords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toketify/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/toketify/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -596,16 +19,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train_oop.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/keras-yolo3-q/train_oop.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="1835">
+              <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find />
+      <find>ๆ</find>
+      <find>inuk</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ๆ</replace>
+      <replace>korn</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -619,13 +63,20 @@
         <option value="$PROJECT_DIR$/keras-yolo3-q/train.py" />
         <option value="$PROJECT_DIR$/keras-yolo3-q/scrimg_detect.py" />
         <option value="$PROJECT_DIR$/keras-yolo3-q/train_oop.py" />
+        <option value="$PROJECT_DIR$/toketify/main.py" />
+        <option value="$PROJECT_DIR$/keras-yolo3-q/mokemify/latnWords.txt" />
+        <option value="$PROJECT_DIR$/keras-yolo3-q/mokemify/thaiWords.txt" />
+        <option value="$PROJECT_DIR$/keras-yolo3-q/mokemify/kornWords.txt" />
+        <option value="$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -645,6 +96,19 @@
               <item name="scrimg_new" type="462c0819:PsiDirectoryNode" />
               <item name="keras-yolo3-q" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="scrimg_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrimg_new" type="462c0819:PsiDirectoryNode" />
+              <item name="keras-yolo3-q" type="462c0819:PsiDirectoryNode" />
+              <item name="mokemify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrimg_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrimg_new" type="462c0819:PsiDirectoryNode" />
+              <item name="keras-yolo3-q" type="462c0819:PsiDirectoryNode" />
+              <item name="mokemify" type="462c0819:PsiDirectoryNode" />
+              <item name="words" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -653,6 +117,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -665,12 +130,14 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/keras-yolo3-q" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/keras-yolo3-q/mokemify" />
+      <recent name="$PROJECT_DIR$/keras-yolo3-q/mokemify/fonts/words" />
       <recent name="$PROJECT_DIR$/keras-yolo3-q/scrap" />
       <recent name="$PROJECT_DIR$/keras-yolo3-q/model_data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/keras-yolo3-q" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -684,6 +151,31 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="scrimg_new" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/keras-yolo3-q/mokemify" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -708,26 +200,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048611" side_tool="true" weight="0.32900944" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3278302" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49513888" visible="true" weight="0.32900944" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -742,107 +233,169 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/train_oop.py">
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00169.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00172.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00175.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00178.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00181.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00184.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00187.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00190.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00193.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00196.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00199.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00202.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00205.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00208.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00211.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00214.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00217.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00223.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00220.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00226.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00229.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00232.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00235.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00238.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00241.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00244.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00247.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00250.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00253.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00256.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00259.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00262.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00265.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00268.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00271.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00274.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00277.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00280.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00283.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00286.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00289.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00292.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00295.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00298.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00301.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00304.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00307.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/imgcount.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/filelist.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/words/kornWords.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-        </state>
+        <state relative-caret-position="-10901" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/yolo_anchors.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/yolo_video.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/darknet53.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/loss_log - Copy.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/coco_annotation.py">
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/train.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/voc_annotation.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/model_data/yolov3-tiny.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/yolo3/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/convert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/yolo.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/yolo3/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/yolo3/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/loss_count.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/model_data/scrimg_classes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/_scrap/train_bottleneck.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/scrimg_detect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1280">
-          <caret line="64" column="24" lean-forward="true" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/train_oop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="1835">
+          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
