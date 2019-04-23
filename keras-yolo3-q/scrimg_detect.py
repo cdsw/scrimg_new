@@ -21,8 +21,8 @@ def detect_img(yolo):
                 c = ''
                 if img[7] == 'L':
                     c = 'latin'
-                elif img[7] == 'I':
-                    c = 'inuktitut'
+                elif img[7] == 'K':
+                    c = 'korean'
                 elif img[7] == 'T':
                     c = 'thai'
                 r_image, accuracy = yolo.detect_image(image, c)

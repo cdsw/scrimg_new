@@ -4,7 +4,6 @@ Class definition of YOLO_v3 style detection model on image and video
 """
 
 import colorsys
-import os
 from timeit import default_timer as timer
 
 import numpy as np
@@ -19,13 +18,13 @@ import os
 from keras.utils import multi_gpu_model
 
 class YOLO(object):
-    grid = 11
+    grid = 14
     _defaults = {
         "model_path": 'model_data/yolo.h5',
         "anchors_path": 'model_data/scrimg_anchors.txt',
         "classes_path": 'model_data/scrimg_classes.txt',
-        "score" : 0.03, #threshold
-        "iou" : 0.45,
+        "score" : 0.10, #threshold
+        "iou" : 0.20,
         "model_image_size" : (32 * grid, 32 * grid),
         "gpu_num" : 1,
     }
