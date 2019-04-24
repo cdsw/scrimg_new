@@ -42,16 +42,18 @@ def initialisePaths():
     if not os.path.exists( "./words/kornWords.txt" ):
         open( "kornWords.txt", "a" ).close()
 
-def begoneFolder(list):
+
+def begoneFolder( list ):
     outList = []
     for font in list:
         if font[-4:] == ".otf" or font[-4:] == ".ttf":
-            outList.append(font)
+            outList.append( font )
     return outList
 
-latnFonts = begoneFolder(os.listdir('./fonts/Latin/'))
-thaiFonts = begoneFolder(os.listdir('./fonts/Thai/'))
-kornFonts = begoneFolder(os.listdir('./fonts/Korean/'))
+
+latnFonts = begoneFolder( os.listdir( './fonts/Latin/' ) )
+thaiFonts = begoneFolder( os.listdir( './fonts/Thai/' ) )
+kornFonts = begoneFolder( os.listdir( './fonts/Korean/' ) )
 
 
 def fontRand( script ):
@@ -65,14 +67,15 @@ def fontRand( script ):
         num = randint( 0, len( kornFonts ) - 1 )
         return './fonts/Korean/' + kornFonts[num]
 
+
 def generateWords( wordlist, amountMin, amountMax, randomCase=False ):
     wordIndices = []
     outList = []
-    for i in range( randint(amountMin, amountMax) ):
+    for i in range( randint( amountMin, amountMax ) ):
         wordIndices.append( randint( 0, len( wordlist ) - 1 ) )
     for i in range( len( wordIndices ) ):
         if randomCase == True:
-            case = randint(0, 2) # 0 = lower, 1 = UPPER, 2 = Title
+            case = randint( 0, 2 )  # 0 = lower, 1 = UPPER, 2 = Title
             if case == 0:
                 outList.append( wordlist[wordIndices[i]].lower() )
             elif case == 1:
@@ -88,9 +91,17 @@ def generateString( list, space=" " ):
     outStr = ""
     for i in range( len( list ) ):
         outStr += list[i] + space
-    outStr += "  "
     return outStr
 
+
+def generateColour():
+    red = randint( 0, 100 )
+    green = randint( 0, 100 )
+    blue = randint( 0, 100 )
+    return (red, green, blue)
+
+
+# GLOBALS
 initialisePaths()
 
 countoffset = 0
@@ -100,31 +111,63 @@ with open( 'imgcount.txt', 'r' ) as fp:
 # filelist = [line.rstrip( '\n' ) for line in open( 'filelist.txt' )]
 
 # INP STRINGS FILE
-latnWords = [line.rstrip( '\n' ) for line in open( './words/latnWords.txt', encoding='utf-8')]
-thaiWords = [line.rstrip( '\n' ) for line in open( './words/thaiWords.txt', encoding='utf-8')]
-kornWords = [line.rstrip( '\n' ) for line in open( './words/kornWords.txt', encoding='utf-8')]
+latnWords = [line.rstrip( '\n' ) for line in open( './words/latnWords.txt', encoding='utf-8' )]
+thaiWords = [line.rstrip( '\n' ) for line in open( './words/thaiWords.txt', encoding='utf-8' )]
+kornWords = [line.rstrip( '\n' ) for line in open( './words/kornWords.txt', encoding='utf-8' )]
 
-def generateImage(scriptChoice, genAmount):
+
+def generateImage( scriptChoice, genAmount ):
     global countoffset
     w = 448
     h = 448
     img = Image.new( 'RGB', (w, h), color='white' )
     fntChoice = fontRand( scriptChoice )
-    print( fntChoice )
     fnt = ImageFont.truetype( fntChoice, randint( 25, 35 ) )
     d = ImageDraw.Draw( img )
+    text = ""
+
+    randY = randint( 64, 320 )
+    randX = randint( 10, 30 )
+    randPosi = (randX, randY)
 
     if scriptChoice == 0:
-        d.text( (20, h / 2), generateString( generateWords( latnWords, 3, 5, randomCase=True ) ), font=fnt, \
-                fill=(0, 0, 0) )
+        text = generateString( generateWords( latnWords, 3, 5, randomCase=True ) )
 
     elif scriptChoice == 1:
-        d.text( (20, h / 2), generateString( generateWords( thaiWords, 3, 5 ), space="" ), font=fnt, \
-                fill=(0, 0, 0) )
+        text = generateString( generateWords( thaiWords, 3, 5 ), space="" )
+        text = text + " "
 
     elif scriptChoice == 2:
-        d.text( (20, h / 2), generateString( generateWords( kornWords, 3, 5 ) ), font=fnt, fill=(0, 0, 0) )
+        text = generateString( generateWords( kornWords, 3, 5 ) )
 
+    d.text( randPosi, text, font=fnt, fill=generateColour() )
+
+    # ==============================
+    textWithoutEndSpace = text[:-1]
+    textSize = d.textsize( textWithoutEndSpace, font=fnt )
+
+    point1 = randPosi
+    point2 = (randPosi[0] + textSize[0], randPosi[1] + textSize[1])
+    d.rectangle([point1, point2], outline='red')
+
+    labelText = ""
+    if scriptChoice == 0:
+        labelText = "Latin"
+    elif scriptChoice == 1:
+        labelText = "Thai"
+    elif scriptChoice == 2:
+        labelText = "Korean"
+    labelFont = ImageFont.truetype( './fonts/Latin/SourceSansPro-Bold.ttf', 18 )
+    labelTextSize = d.textsize( labelText, font=labelFont )
+
+    # ==============================
+    point3 = (point1[0], point1[1] - labelTextSize[1])
+    point4 = (point1[0] + labelTextSize[0], point1[1])
+    d.rectangle([point3, point4], fill='red')
+    d.text( point3, labelText, font=labelFont, fill='white')
+
+
+    # ==============================
     filename = "./output/" + str( initial( scriptChoice ) ) + "_" + \
                str( imgcount + countoffset ).zfill( 5 ) + ".jpg"
     img.save( filename )
@@ -134,18 +177,21 @@ def generateImage(scriptChoice, genAmount):
     filefl.close()
 
     countoffset += 1
-    print( "File " + filename + " processed successfully." )
+    print( "==> File " + filename + " processed successfully." )
+    print( "    TEXT FONT: " + str( fntChoice ) )
+    print( "    TEXT POSI: " + str( randPosi ) )
+    print( "    TEXT SIZE: " + str( textSize ) )
+
 
 def main():
-
-    #scriptChoice = int( input( "Generate images in which script?\n" + \
+    # scriptChoice = int( input( "Generate images in which script?\n" + \
     #                           "(LATN = 0, THAI = 1, KORN = 2) : " ) )
     genAmount = int( input( "How many images to generate? : " ) )
 
     # GENERATE
-    for i in range(genAmount):
-        for choice in range(3):
-            generateImage(choice, genAmount)
+    for i in range( genAmount ):
+        for choice in range( 3 ):
+            generateImage( choice, genAmount )
 
     fileic = open( "imgcount.txt", "w" )
     fileic.write( str( imgcount + countoffset ) )
