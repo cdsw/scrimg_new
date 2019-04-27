@@ -118,16 +118,16 @@ kornWords = [line.rstrip('\n') for line in open('./words/kornWords.txt', encodin
 
 def generateImage(scriptChoice, genAmount):
     global countoffset
-    w = 448
-    h = 448
-    img = Image.new('RGB', (w, h), color='white')
-    fntChoice = fontRand(scriptChoice)
-    fnt = ImageFont.truetype(fntChoice, randint(25, 35))
-    d = ImageDraw.Draw(img)
+    w = 256
+    h = 256
+    img = Image.new( 'RGB', (w, h), color='white' )
+    fntChoice = fontRand( scriptChoice )
+    fnt = ImageFont.truetype( fntChoice, randint( w // 15, w // 10 ) )
+    d = ImageDraw.Draw( img )
     text = ""
 
-    randY = randint(64, 320)
-    randX = randint(10, 30)
+    randY = randint( h // 7, (h // 7) * 6 )
+    randX = randint( w // 50, w // 20 )
     randPosi = (randX, randY)
 
     if scriptChoice == 0:
@@ -203,9 +203,9 @@ def main():
     genAmount = int(input("How many images to generate? : "))
 
     # GENERATE
-    for i in range(genAmount):
-        for choice in range(3):
-            generateImage(choice, genAmount)
+    for choice in range( 3 ):
+        for i in range( genAmount ):
+            generateImage( choice, genAmount )
 
     fileic = open("imgcount.txt", "w")
     fileic.write(str(imgcount + countoffset))
