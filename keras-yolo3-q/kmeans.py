@@ -74,7 +74,8 @@ class YOLO_Kmeans:
         dataSet = []
         for line in f:
             infos = line.split(" ")
-            length = len(infos) - 1
+            print(infos)
+            length = len(infos)
             for i in range(1, length):
                 width = int(infos[i].split(",")[2]) - \
                     int(infos[i].split(",")[0])
@@ -97,6 +98,7 @@ class YOLO_Kmeans:
 
 if __name__ == "__main__":
     cluster_number = 6 #tiny yolo
-    filename = "Labeling/scrimg_train.txt"
+    filename = "./mokemify/annotation.txt"
+    #filename = "./Labeling/scrimg_train.txt"
     kmeans = YOLO_Kmeans(cluster_number, filename)
     kmeans.txt2clusters()

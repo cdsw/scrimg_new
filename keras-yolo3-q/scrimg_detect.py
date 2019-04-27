@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 def detect_img(yolo):
-    path = "./Labeling/input/"
+    path = "./mokemify/output/"
     imgCount = 0
     total_accuracy = 0
     for r, d, f in os.walk(path):
@@ -19,16 +19,17 @@ def detect_img(yolo):
             else:
                 # Temporary
                 c = ''
-                if img[7] == 'L':
+                if img[0] == 'L':
                     c = 'latin'
-                elif img[7] == 'K':
+                elif img[0] == 'K':
                     c = 'korean'
-                elif img[7] == 'T':
+                elif img[0] == 'T':
                     c = 'thai'
                 r_image, accuracy = yolo.detect_image(image, c)
                 #r_image.show()
                 r_image.save( './out/' + img, 'PNG' )
                 print("acc: " + str(accuracy) + " tot: " + str(total_accuracy) + " img ct " + str(imgCount))
+                print(img + '^')
                 total_accuracy += accuracy
     print("TOTAL_ACCURACY = " + str(total_accuracy/imgCount))
     yolo.close_session()
@@ -48,5 +49,5 @@ def detect_img_one(yolo):
     yolo.close_session()
 
 if __name__ == '__main__':
-    #detect_img(YOLO())
-    detect_img_one(YOLO())
+    detect_img(YOLO())
+    #detect_img_one(YOLO())

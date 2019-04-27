@@ -19,11 +19,12 @@ from keras.utils import multi_gpu_model
 
 class YOLO(object):
     grid = 14
+    model_version = "T0426"
     _defaults = {
-        "model_path": 'model_data/yolo.h5',
-        "anchors_path": 'model_data/scrimg_anchors.txt',
+        "model_path": 'model_data/yolo-' + model_version +'.h5',
+        "anchors_path": 'model_data/scrimg_anchors-' + model_version +'.txt',
         "classes_path": 'model_data/scrimg_classes.txt',
-        "score" : 0.10, #threshold
+        "score" : 0.03, #threshold
         "iou" : 0.20,
         "model_image_size" : (32 * grid, 32 * grid),
         "gpu_num" : 1,
@@ -68,10 +69,14 @@ class YOLO(object):
         is_tiny_version = num_anchors==6 # default setting
         try:
             self.yolo_model = load_model(model_path, compile=False)
+            print(self.yolo_model.layers[-1].output_shape[-1])
+            print(num_anchors/len(self.yolo_model.output) * (num_classes + 5))
         except:
             self.yolo_model = tiny_yolo_body(Input(shape=(None,None,3)), num_anchors//2, num_classes) \
                 if is_tiny_version else yolo_body(Input(shape=(None,None,3)), num_anchors//3, num_classes)
             self.yolo_model.load_weights(self.model_path) # make sure model, anchors and classes match
+            print(self.yolo_model.layers[-1].output_shape[-1])
+            print(num_anchors/len(self.yolo_model.output) * (num_classes + 5))
         else:
             assert self.yolo_model.layers[-1].output_shape[-1] == \
                 num_anchors/len(self.yolo_model.output) * (num_classes + 5), \
