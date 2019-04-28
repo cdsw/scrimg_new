@@ -1,0 +1,114 @@
+/* mobile 576px */
+/* tablet 768px */
+/* tablet-l 992px */
+/* width 1200px */
+
+@font-face {
+  font-family: LemonMilk;
+  src: url(fonts/LemonMilk.otf);
+}
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: #727272;
+}
+
+.navbar {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0px 25px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+.navbar a {
+  float: left;
+  font-family: LemonMilk;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("images/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  align-items: center;
+}
+
+.scr {
+  width: 27.6px;
+  height: 44px;
+  box-shadow: 0 3px 6px 0 rgba(255, 126, 126, 0.46);
+  background-image: linear-gradient(217deg, #ff7e7e, #fcbf4c);
+}
+
+.s {
+  margin: 100px 0;
+}
+
+.wording {
+  width: 500px;
+  height: 100px;
+  margin: 100px 0;
+  font-family: Menlo;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: center;
+  color: #727272;
+}
+
+.explore-button {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 2px #ff7e7e;
+}
+
+.btn-outline-primary {
+  border: solid 2px #ff7e7e;
+  color: #ff7e7e;
+  font-family: LemonMilk;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff7e7e;
+  outline: 0 none;
+  box-shadow: #ff7e7e;
+  border: #ff7e7e;
+}
+
+.btn-lg {
+  border-radius: 5px;
+}
