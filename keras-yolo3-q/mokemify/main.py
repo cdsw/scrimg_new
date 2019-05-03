@@ -181,7 +181,7 @@ def generateImage(scriptChoice, genAmount):
     filefl.close()
 
     countoffset += 1
-    print_trace = True
+    print_trace = False
     if print_trace:
         print("==> File " + filename + " processed successfully.")
         print("    TEXT FONT: " + str(fntChoice))

@@ -17,7 +17,7 @@ class Trainer:
     def __init__(self, img_size, annotation_path='mokemify/annotation.txt',
                  log_dir='logs/',
                  classes_path='model_data/scrimg_classes.txt',
-                 anchors_path='model_data/scrimg_anchors.txt',
+                 anchors_path='model_data/scrimg_anchors_T0504-2.txt',
                  model_path='model_data/yolo.h5'
                  ):
         self.annotation_path = annotation_path

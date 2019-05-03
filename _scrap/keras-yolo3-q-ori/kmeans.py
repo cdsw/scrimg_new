@@ -58,7 +58,7 @@ class YOLO_Kmeans:
         return clusters
 
     def result2txt(self, data):
-        f = open("scrimg_anchors.txt", 'w')
+        f = open("scrimg_anchors_T0504-2.txt", 'w')
         row = np.shape(data)[0]
         for i in range(row):
             if i == 0:
