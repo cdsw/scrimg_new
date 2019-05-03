@@ -18,14 +18,14 @@ import os
 from keras.utils import multi_gpu_model
 
 class YOLO(object):
-    grid = 14
-    model_version = "T0426"
+    grid = 8
+    model_version = "T0504"
     _defaults = {
         "model_path": 'model_data/yolo-' + model_version +'.h5',
         "anchors_path": 'model_data/scrimg_anchors-' + model_version +'.txt',
         "classes_path": 'model_data/scrimg_classes.txt',
-        "score" : 0.03, #threshold
-        "iou" : 0.20,
+        "score" : 0.10, #threshold
+        "iou" : 0.30,
         "model_image_size" : (32 * grid, 32 * grid),
         "gpu_num" : 1,
     }

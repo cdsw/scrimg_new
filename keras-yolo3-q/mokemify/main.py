@@ -122,7 +122,7 @@ def generateImage(scriptChoice, genAmount):
     h = 256
     img = Image.new( 'RGB', (w, h), color='white' )
     fntChoice = fontRand( scriptChoice )
-    fnt = ImageFont.truetype( fntChoice, randint( w // 15, w // 10 ) )
+    fnt = ImageFont.truetype( fntChoice, randint( w // 12, w // 8 ) )
     d = ImageDraw.Draw( img )
     text = ""
 
@@ -136,6 +136,7 @@ def generateImage(scriptChoice, genAmount):
     elif scriptChoice == 1:
         text = generateString(generateWords(thaiWords, 3, 5), space="")
         text = text + " "
+        fnt = ImageFont.truetype(fntChoice, randint(w // 10, w // 6))
 
     elif scriptChoice == 2:
         text = generateString(generateWords(kornWords, 3, 5))
@@ -180,7 +181,7 @@ def generateImage(scriptChoice, genAmount):
     filefl.close()
 
     countoffset += 1
-    print_trace = False
+    print_trace = True
     if print_trace:
         print("==> File " + filename + " processed successfully.")
         print("    TEXT FONT: " + str(fntChoice))
