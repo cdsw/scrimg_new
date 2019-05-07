@@ -1,0 +1,231 @@
+$
+TESTING RUN # 0 at 2019-05-07 02:56:35.692622
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.25
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 151.57000000000005, 'T': 186.33999999999986, 'K': 166.34999999999994}
+Total correctness: {'L': 274.6153983792025, 'T': 274.5830839662036, 'K': 277.2939425992223}
+Total detected   : {'L': 290, 'T': 288, 'K': 291}
+Ave. confidence : {'L': 0.5052333333333335, 'T': 0.6211333333333329, 'K': 0.5544999999999998}
+Ave. correctness: {'L': 0.9153846612640083, 'T': 0.915276946554012, 'K': 0.9243131419974077}
+Overall: System correctness = 0.91832466666
+
+$
+TESTING RUN # 1 at 2019-05-07 03:13:37.936320
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.15, IOU = 0.25
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 150.59000000000006, 'T': 186.22999999999988, 'K': 166.19999999999993}
+Total correctness: {'L': 270.2664864141027, 'T': 275.0479746902608, 'K': 278.39577632122933}
+Total detected   : {'L': 281, 'T': 286, 'K': 288}
+Ave. confidence : {'L': 0.5019666666666669, 'T': 0.6207666666666662, 'K': 0.5539999999999998}
+Ave. correctness: {'L': 0.900888288047009, 'T': 0.9168265823008693, 'K': 0.9279859210707645}
+Overall: System correctness = 0.91523333333
+
+$
+TESTING RUN # 2 at 2019-05-07 03:24:29.873349
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.15, IOU = 0.25
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 150.59000000000006, 'T': 186.22999999999988, 'K': 166.19999999999993}
+Total correctness: {'L': 270.2664864141027, 'T': 275.0479746902608, 'K': 278.39577632122933}
+Total detected   : {'L': 281, 'T': 286, 'K': 288}
+Ave. confidence : {'L': 0.5019666666666669, 'T': 0.6207666666666662, 'K': 0.5539999999999998}
+Ave. correctness: {'L': 0.900888288047009, 'T': 0.9168265823008693, 'K': 0.9279859210707645}
+Overall: System correctness = 0.91522222222
+
+$
+TESTING RUN # 3 at 2019-05-07 03:29:44.273297
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.2, IOU = 0.25
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 149.31000000000006, 'T': 184.6499999999999, 'K': 165.07999999999996}
+Total correctness: {'L': 265.5125539083016, 'T': 269.24641958232183, 'K': 274.33628966588304}
+Total detected   : {'L': 272, 'T': 275, 'K': 280}
+Ave. confidence : {'L': 0.4977000000000002, 'T': 0.6154999999999996, 'K': 0.5502666666666666}
+Ave. correctness: {'L': 0.8850418463610052, 'T': 0.8974880652744062, 'K': 0.9144542988862768}
+Overall: System correctness = 0.8989947368405627
+
+$
+TESTING RUN # 4 at 2019-05-07 03:32:24.366152
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.1
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 151.57000000000005, 'T': 186.33999999999986, 'K': 166.34999999999994}
+Total correctness: {'L': 274.6153983792025, 'T': 274.5830839662036, 'K': 277.2939425992223}
+Total detected   : {'L': 290, 'T': 288, 'K': 291}
+Ave. confidence : {'L': 0.5052333333333335, 'T': 0.6211333333333329, 'K': 0.5544999999999998}
+Ave. correctness: {'L': 0.9153846612640083, 'T': 0.915276946554012, 'K': 0.9243131419974077}
+Overall: System correctness = 0.9183249166051427
+
+$
+TESTING RUN # 5 at 2019-05-07 03:34:09.313608
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 151.57000000000005, 'T': 186.33999999999986, 'K': 166.34999999999994}
+Total correctness: {'L': 274.6153983792025, 'T': 274.5830839662036, 'K': 277.2939425992223}
+Total detected   : {'L': 290, 'T': 288, 'K': 291}
+Ave. confidence : {'L': 0.5052333333333335, 'T': 0.6211333333333329, 'K': 0.5544999999999998}
+Ave. correctness: {'L': 0.9153846612640083, 'T': 0.915276946554012, 'K': 0.9243131419974077}
+Overall: System correctness = 0.9183249166051427
+
+$
+TESTING RUN # 6 at 2019-05-07 03:43:31.298759
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.05, IOU = 0.05
+Num of images    : {'L': 300, 'T': 300, 'K': 300}
+Total confidence : {'L': 151.94000000000005, 'T': 186.63999999999984, 'K': 166.70999999999995}
+Total correctness: {'L': 275.60512669963845, 'T': 276.15997002060277, 'K': 277.27242679450916}
+Total detected   : {'L': 296, 'T': 295, 'K': 295}
+Ave. confidence : {'L': 0.5064666666666668, 'T': 0.6221333333333328, 'K': 0.5556999999999999}
+Ave. correctness: {'L': 0.9186837556654615, 'T': 0.9205332334020092, 'K': 0.9242414226483638}
+Overall: System correctness = 0.9211528039052781
+
+$
+TESTING RUN # 7 at 2019-05-07 03:47:21.229762
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 300, 'T': 300, 'K': 300} with #boxes: 979
+Total confidence : {'L': 151.57000000000005, 'T': 186.33999999999986, 'K': 166.34999999999994}
+Total correctness: {'L': 274.6153983792025, 'T': 274.5830839662036, 'K': 277.2939425992223}
+Total detected   : {'L': 290, 'T': 288, 'K': 291}
+Ave. confidence : {'L': 0.5052333333333335, 'T': 0.6211333333333329, 'K': 0.5544999999999998}
+Ave. correctness: {'L': 0.9153846612640083, 'T': 0.915276946554012, 'K': 0.9243131419974077}
+Overall: System correctness = 0.9183249166051427
+
+$
+TESTING RUN # 8 at 2019-05-07 03:48:21.523507
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.05, IOU = 0.05
+Num of images    : {'L': 300, 'T': 300, 'K': 300} with #boxes: 1071
+Total confidence : {'L': 151.94000000000005, 'T': 186.63999999999984, 'K': 166.70999999999995}
+Total correctness: {'L': 275.60512669963845, 'T': 276.15997002060277, 'K': 277.27242679450916}
+Total detected   : {'L': 296, 'T': 295, 'K': 295}
+Ave. confidence : {'L': 0.5064666666666668, 'T': 0.6221333333333328, 'K': 0.5556999999999999}
+Ave. correctness: {'L': 0.9186837556654615, 'T': 0.9205332334020092, 'K': 0.9242414226483638}
+Overall: System correctness = 0.9211528039052781
+
+$
+TESTING RUN # 9 at 2019-05-07 03:50:34.475886
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.05, IOU = 0.01
+Num of images    : {'L': 300, 'T': 300, 'K': 300} with #boxes: 1071
+Total confidence : {'L': 151.94000000000005, 'T': 186.63999999999984, 'K': 166.70999999999995}
+Total correctness: {'L': 275.60512669963845, 'T': 276.15997002060277, 'K': 277.27242679450916}
+Total detected   : {'L': 296, 'T': 295, 'K': 295}
+Ave. confidence : {'L': 0.5064666666666668, 'T': 0.6221333333333328, 'K': 0.5556999999999999}
+Ave. correctness: {'L': 0.9186837556654615, 'T': 0.9205332334020092, 'K': 0.9242414226483638}
+Overall: System correctness = 0.9211528039052781
+
+$
+TESTING RUN # 10 at 2019-05-07 03:52:12.532301
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.05, IOU = 0.9
+Num of images    : {'L': 300, 'T': 300, 'K': 300} with #boxes: 4323
+Total confidence : {'L': 151.94000000000005, 'T': 186.63999999999984, 'K': 166.70999999999995}
+Total correctness: {'L': 278.7059887561005, 'T': 278.0413805170383, 'K': 279.5931336651965}
+Total detected   : {'L': 296, 'T': 295, 'K': 295}
+Ave. confidence : {'L': 0.5064666666666668, 'T': 0.6221333333333328, 'K': 0.5556999999999999}
+Ave. correctness: {'L': 0.929019962520335, 'T': 0.926804601723461, 'K': 0.9319771122173216}
+Overall: System correctness = 0.9292672254870392
+
+$
+TESTING RUN # 11 at 2019-05-07 03:55:08.821418
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.01, IOU = 0.05
+Num of images    : {'L': 300, 'T': 300, 'K': 300} with #boxes: 1321
+Total confidence : {'L': 152.02000000000007, 'T': 186.74999999999986, 'K': 166.79999999999995}
+Total correctness: {'L': 272.97837623633626, 'T': 275.42375463684675, 'K': 275.26844568609977}
+Total detected   : {'L': 300, 'T': 299, 'K': 299}
+Ave. confidence : {'L': 0.5067333333333336, 'T': 0.6224999999999995, 'K': 0.5559999999999998}
+Ave. correctness: {'L': 0.9099279207877875, 'T': 0.9180791821228225, 'K': 0.9175614856203326}
+Overall: System correctness = 0.9151895295103143
+
+$
+TESTING RUN # 12 at 2019-05-07 04:00:18.658905
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 300, 'T': 300, 'K': 300} with #boxes: 979
+Total confidence : {'L': 151.57000000000005, 'T': 186.33999999999986, 'K': 166.34999999999994}
+Total correctness: {'L': 274.6153983792025, 'T': 274.5830839662036, 'K': 277.2939425992223}
+Total detected   : {'L': 290, 'T': 288, 'K': 291}
+Ave. confidence : {'L': 0.5052333333333335, 'T': 0.6211333333333329, 'K': 0.5544999999999998}
+Ave. correctness: {'L': 0.9153846612640083, 'T': 0.915276946554012, 'K': 0.9243131419974077}
+Overall: System correctness = 0.9183249166051427
+
+$
+TESTING RUN # 13 at 2019-05-07 04:09:38.201699
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 1000, 'T': 1000, 'K': 1000} with #boxes: 3273
+Total confidence : {'L': 499.30999999999926, 'T': 609.1000000000001, 'K': 559.6400000000002}
+Total correctness: {'L': 923.2850638243987, 'T': 910.6357944629535, 'K': 916.0778118726784}
+Total detected   : {'L': 970, 'T': 967, 'K': 962}
+Ave. confidence : {'L': 0.49930999999999925, 'T': 0.6091000000000001, 'K': 0.5596400000000002}
+Ave. correctness: {'L': 0.9232850638243987, 'T': 0.9106357944629535, 'K': 0.9160778118726783}
+Overall: System correctness = 0.9166662233866768
+
+$
+TESTING RUN # 14 at 2019-05-07 17:24:53.218513
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 1, 'T': 1, 'K': 1} with #boxes: 0
+Total confidence : {'L': 0, 'T': 0, 'K': 0}
+Total correctness: {'L': 0, 'T': 0, 'K': 0}
+Total detected   : {'L': 0, 'T': 0, 'K': 0}
+Ave. confidence : {'L': 0.0, 'T': 0.0, 'K': 0.0}
+Ave. correctness: {'L': 0.0, 'T': 0.0, 'K': 0.0}
+Overall: System correctness = 0.0
+
+$
+TESTING RUN # 15 at 2019-05-07 17:25:36.182099
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 1, 'T': 1, 'K': 2} with #boxes: 0
+Total confidence : {'L': 0, 'T': 0, 'K': 0}
+Total correctness: {'L': 0, 'T': 0, 'K': 0}
+Total detected   : {'L': 0, 'T': 0, 'K': 0}
+Ave. confidence : {'L': 0.0, 'T': 0.0, 'K': 0.0}
+Ave. correctness: {'L': 0.0, 'T': 0.0, 'K': 0.0}
+Overall: System correctness = 0.0
+
+$
+TESTING RUN # 16 at 2019-05-07 17:26:18.650356
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 1, 'T': 1, 'K': 2} with #boxes: 2
+Total confidence : {'L': 0, 'T': 0.89, 'K': 0}
+Total correctness: {'L': 0, 'T': 0.8811881188118812, 'K': 0}
+Total detected   : {'L': 0, 'T': 1, 'K': 0}
+Ave. confidence : {'L': 0.0, 'T': 0.89, 'K': 0.0}
+Ave. correctness: {'L': 0.0, 'T': 0.8811881188118812, 'K': 0.0}
+Overall: System correctness = 0.2202970297029703
+
+$
+TESTING RUN # 17 at 2019-05-07 17:39:57.758851
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 1, 'T': 1, 'K': 2} with #boxes: 2
+Total confidence : {'L': 0, 'T': 0.89, 'K': 0}
+Total correctness: {'L': 0, 'T': 0.8811881188118812, 'K': 0}
+Total detected   : {'L': 0, 'T': 1, 'K': 0}
+Ave. confidence : {'L': 0.0, 'T': 0.89, 'K': 0.0}
+Ave. correctness: {'L': 0.0, 'T': 0.8811881188118812, 'K': 0.0}
+Overall: System correctness = 0.2202970297029703
+
+$
+TESTING RUN # 18 at 2019-05-07 17:40:31.570264
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.01, IOU = 0.05
+Num of images    : {'L': 1, 'T': 1, 'K': 2} with #boxes: 10
+Total confidence : {'L': 0.07, 'T': 0.89, 'K': 0}
+Total correctness: {'L': 0.7000000000000001, 'T': 0.8811881188118812, 'K': 0}
+Total detected   : {'L': 1, 'T': 1, 'K': 2}
+Ave. confidence : {'L': 0.07, 'T': 0.89, 'K': 0.0}
+Ave. correctness: {'L': 0.7000000000000001, 'T': 0.8811881188118812, 'K': 0.0}
+Overall: System correctness = 0.3952970297029703
+
+$
+TESTING RUN # 19 at 2019-05-07 17:47:27.179356
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.01, IOU = 0.05
+Num of images    : {'L': 7, 'T': 5, 'K': 6} with #boxes: 29
+Total confidence : {'L': 1.96, 'T': 3.01, 'K': 1.5999999999999999}
+Total correctness: {'L': 5.634539969834088, 'T': 4.854936998854525, 'K': 5.298319327731093}
+Total detected   : {'L': 7, 'T': 5, 'K': 6}
+Ave. confidence : {'L': 0.27999999999999997, 'T': 0.602, 'K': 0.26666666666666666}
+Ave. correctness: {'L': 0.8049342814048697, 'T': 0.970987399770905, 'K': 0.8830532212885155}
+Overall: System correctness = 0.8770997942455393
+
+$
+TESTING RUN # 20 at 2019-05-07 17:48:17.026758
+WITH MODEL VERSION: yolo-T0504-2, THRESH = 0.1, IOU = 0.05
+Num of images    : {'L': 7, 'T': 5, 'K': 6} with #boxes: 17
+Total confidence : {'L': 1.8699999999999999, 'T': 3.01, 'K': 1.55}
+Total correctness: {'L': 5.0, 'T': 5.0, 'K': 5.0}
+Total detected   : {'L': 6, 'T': 5, 'K': 5}
+Ave. confidence : {'L': 0.2671428571428571, 'T': 0.602, 'K': 0.25833333333333336}
+Ave. correctness: {'L': 0.7142857142857143, 'T': 1.0, 'K': 0.8333333333333334}
+Overall: System correctness = 0.8333333333333334
+

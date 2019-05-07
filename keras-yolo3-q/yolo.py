@@ -17,18 +17,22 @@ from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 
+
 class YOLO(object):
     grid = 8
     model_version = "T0504-2"
     _defaults = {
-        "model_path": 'model_data/yolo-' + model_version +'.h5',
-        "anchors_path": 'model_data/scrimg_anchors-' + model_version +'.txt',
+        "model_path": 'model_data/yolo-' + model_version + '.h5',
+        "anchors_path": 'model_data/scrimg_anchors-' + model_version + '.txt',
         "classes_path": 'model_data/scrimg_classes.txt',
-        "score" : 0.10, #threshold
-        "iou" : 0.25,
-        "model_image_size" : (32 * grid, 32 * grid),
-        "gpu_num" : 1,
+        "score": 0.10,  # threshold
+        "iou": 0.05,
+        "model_image_size": (32 * grid, 32 * grid),
+        "gpu_num": 1,
     }
+
+    def get_params(self):
+        return self.score, self.iou, self.model_path
 
     @classmethod
     def get_defaults(cls, n):
@@ -38,8 +42,8 @@ class YOLO(object):
             return "Unrecognized attribute name '" + n + "'"
 
     def __init__(self, **kwargs):
-        self.__dict__.update(self._defaults) # set up default values
-        self.__dict__.update(kwargs) # and update with user overrides
+        self.__dict__.update(self._defaults)  # set up default values
+        self.__dict__.update(kwargs)  # and update with user overrides
         self.class_names = self._get_class()
         self.anchors = self._get_anchors()
         self.sess = K.get_session()
@@ -59,31 +63,7 @@ class YOLO(object):
         anchors = [float(x) for x in anchors.split(',')]
         return np.array(anchors).reshape(-1, 2)
 
-    def generate(self):
-        model_path = os.path.expanduser(self.model_path)
-        assert model_path.endswith('.h5'), 'Keras model or weights must be a .h5 file.'
-
-        # Load model, or construct model and load weights.
-        num_anchors = len(self.anchors)
-        num_classes = len(self.class_names)
-        is_tiny_version = num_anchors==6 # default setting
-        try:
-            self.yolo_model = load_model(model_path, compile=False)
-            print(self.yolo_model.layers[-1].output_shape[-1])
-            print(num_anchors/len(self.yolo_model.output) * (num_classes + 5))
-        except:
-            self.yolo_model = tiny_yolo_body(Input(shape=(None,None,3)), num_anchors//2, num_classes) \
-                if is_tiny_version else yolo_body(Input(shape=(None,None,3)), num_anchors//3, num_classes)
-            self.yolo_model.load_weights(self.model_path) # make sure model, anchors and classes match
-            print(self.yolo_model.layers[-1].output_shape[-1])
-            print(num_anchors/len(self.yolo_model.output) * (num_classes + 5))
-        else:
-            assert self.yolo_model.layers[-1].output_shape[-1] == \
-                num_anchors/len(self.yolo_model.output) * (num_classes + 5), \
-                'Mismatch between model and given anchor and class sizes'
-
-        print('{} model, anchors, and classes loaded.'.format(model_path))
-
+    def generate_colors(self):
         # Generate colors for drawing bounding boxes.
         hsv_tuples = [(x / len(self.class_names), 1., 1.)
                       for x in range(len(self.class_names))]
@@ -95,100 +75,112 @@ class YOLO(object):
         np.random.shuffle(self.colors)  # Shuffle colors to decorrelate adjacent classes.
         np.random.seed(None)  # Reset seed to default.
 
+    def generate(self):
+        model_path = os.path.expanduser(self.model_path)
+        assert model_path.endswith('.h5'), 'Keras model or weights must be a .h5 file.'
+
+        # Load model, or construct model and load weights.
+        num_anchors = len(self.anchors)
+        num_classes = len(self.class_names)
+        is_tiny_version = num_anchors == 6  # default setting
+        try:
+            self.yolo_model = load_model(model_path, compile=False)
+            # print(self.yolo_model.layers[-1].output_shape[-1])
+            # print(num_anchors/len(self.yolo_model.output) * (num_classes + 5))
+        except:
+            self.yolo_model = tiny_yolo_body(Input(shape=(None, None, 3)), num_anchors // 2, num_classes) \
+                if is_tiny_version else yolo_body(Input(shape=(None, None, 3)), num_anchors // 3, num_classes)
+            self.yolo_model.load_weights(self.model_path)  # make sure model, anchors and classes match
+            # print(self.yolo_model.layers[-1].output_shape[-1])
+            # print(num_anchors/len(self.yolo_model.output) * (num_classes + 5))
+        else:
+            assert self.yolo_model.layers[-1].output_shape[-1] == \
+                   num_anchors / len(self.yolo_model.output) * (num_classes + 5), \
+                'Mismatch between model and given anchor and class sizes'
+
+        print('{} model, anchors, and classes loaded.'.format(model_path))
+        self.generate_colors()
+
         # Generate output tensor targets for filtered bounding boxes.
-        self.input_image_shape = K.placeholder(shape=(2, ))
-        if self.gpu_num>=2:
+        self.input_image_shape = K.placeholder(shape=(2,))
+        if self.gpu_num >= 2:
             self.yolo_model = multi_gpu_model(self.yolo_model, gpus=self.gpu_num)
         boxes, scores, classes = yolo_eval(self.yolo_model.output, self.anchors,
-                len(self.class_names), self.input_image_shape,
-                score_threshold=self.score, iou_threshold=self.iou)
+                                           len(self.class_names), self.input_image_shape,
+                                           score_threshold=self.score, iou_threshold=self.iou)
         return boxes, scores, classes
 
-    def detect_image(self, image, cls_test = ''):
-        start = timer()
-
-        if self.model_image_size != (None, None):
-            assert self.model_image_size[0]%32 == 0, 'Multiples of 32 required'
-            assert self.model_image_size[1]%32 == 0, 'Multiples of 32 required'
-            boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))
+    def detect_image(self, image_path):
+        try:
+            image = Image.open(image_path)
+        except:
+            print('Open Error! Try again!', end='')
         else:
-            new_image_size = (image.width - (image.width % 32),
-                              image.height - (image.height % 32))
-            boxed_image = letterbox_image(image, new_image_size)
-        image_data = np.array(boxed_image, dtype='float32')
-
-        print(image_data.shape)
-        image_data /= 255.
-        image_data = np.expand_dims(image_data, 0)  # Add batch dimension.
-
-        out_boxes, out_scores, out_classes = self.sess.run(
-            [self.boxes, self.scores, self.classes],
-            feed_dict={
-                self.yolo_model.input: image_data,
-                self.input_image_shape: [image.size[1], image.size[0]],
-                K.learning_phase(): 0
-            })
-
-        print('Found {} boxes for {}'.format(len(out_boxes), 'img'))
-
-        font = ImageFont.truetype(font='FiraMono-Medium.otf',
-                    size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
-        thickness = (image.size[0] + image.size[1]) // 300
-
-        # Accuracy utility
-        total_conf = {}
-        for cls in self.class_names:
-            total_conf[cls] = 0
-
-        for i, c in reversed(list(enumerate(out_classes))):
-            predicted_class = self.class_names[c]
-            box = out_boxes[i]
-            score = out_scores[i]
-
-            label = '{} {:.2f}'.format(predicted_class, score)
-            draw = ImageDraw.Draw(image)
-            label_size = draw.textsize(label, font)
-            # Accuracy
-            total_conf[predicted_class] += score
-
-            top, left, bottom, right = box
-            top = max(0, np.floor(top + 0.5).astype('int32'))
-            left = max(0, np.floor(left + 0.5).astype('int32'))
-            bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
-            right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
-            print(label, (left, top), (right, bottom))
-
-            if top - label_size[1] >= 0:
-                text_origin = np.array([left, top - label_size[1]])
+            start = timer()
+            if self.model_image_size != (None, None):
+                assert self.model_image_size[0] % 32 == 0, 'Multiples of 32 required'
+                assert self.model_image_size[1] % 32 == 0, 'Multiples of 32 required'
+                boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))
             else:
-                text_origin = np.array([left, top + 1])
+                new_image_size = (image.width - (image.width % 32),
+                                  image.height - (image.height % 32))
+                boxed_image = letterbox_image(image, new_image_size)
+            image_data = np.array(boxed_image, dtype='float32')
 
-            # My kingdom for a good redistributable image drawing library.
-            for i in range(thickness):
+            # print(image_data.shape)
+            image_data /= 255.
+            image_data = np.expand_dims(image_data, 0)  # Add batch dimension.
+
+            out_boxes, out_scores, out_classes = self.sess.run(
+                [self.boxes, self.scores, self.classes],
+                feed_dict={
+                    self.yolo_model.input: image_data,
+                    self.input_image_shape: [image.size[1], image.size[0]],
+                    K.learning_phase(): 0
+                })
+
+            # print('Found {} boxes for {}'.format(len(out_boxes), 'img'))
+
+            font = ImageFont.truetype(font='./yolo3/FiraMono-Medium.otf',
+                                      size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
+            thickness = (image.size[0] + image.size[1]) // 300
+
+            converted_boxes = []
+            for i, c in reversed(list(enumerate(out_classes))):
+                predicted_class = self.class_names[c]
+                box = out_boxes[i]
+                score = out_scores[i]
+
+                label = '{} {:.2f}'.format(predicted_class, score)
+                draw = ImageDraw.Draw(image)
+                label_size = draw.textsize(label, font)
+
+                top, left, bottom, right = box
+                top = max(0, np.floor(top + 0.5).astype('int32'))
+                left = max(0, np.floor(left + 0.5).astype('int32'))
+                bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
+                right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
+                converted_boxes.append((label, (left, top, right, bottom)))
+
+                if top - label_size[1] >= 0:
+                    text_origin = np.array([left, top - label_size[1]])
+                else:
+                    text_origin = np.array([left, top + 1])
+
+                # My kingdom for a good redistributable image drawing library.
+                for i in range(thickness):
+                    draw.rectangle(
+                        [left + i, top + i, right - i, bottom - i],
+                        outline=self.colors[c])
                 draw.rectangle(
-                    [left + i, top + i, right - i, bottom - i],
-                    outline=self.colors[c])
-            draw.rectangle(
-                [tuple(text_origin), tuple(text_origin + label_size)],
-                fill=self.colors[c])
-            draw.text(text_origin, label, fill=(0, 0, 0), font=font)
-            del draw
+                    [tuple(text_origin), tuple(text_origin + label_size)],
+                    fill=self.colors[c])
+                draw.text(text_origin, label, fill=(0, 0, 0), font=font)
+                del draw
 
-        end = timer()
-        print(end - start)
-
-        accuracy = None
-        # Accuracy
-        if cls_test != '':
-            target_conf = total_conf[cls_test]
-            sum_conf = 0
-            for item in total_conf:
-                sum_conf += total_conf[item]
-            try:
-                accuracy = target_conf/sum_conf
-            except ZeroDivisionError:
-                accuracy = 0
-        return image, accuracy
+            end = timer()
+            time = end - start
+            return image, converted_boxes, time
 
     def close_session(self):
         self.sess.close()

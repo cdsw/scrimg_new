@@ -1,72 +1,141 @@
-import sys
-import argparse
-from yolo import YOLO#, detect_video
-from PIL import Image
-import os
+import os, datetime, re
+from yolo import YOLO
 
-def detect_img(yolo):
+debug = True
+
+def main():
+    config_path = "./config.txt"
     path = "./mokemify/output/"
-    imgCount = [0, 0, 0]
-    total_accuracy = [0, 0, 0]
-    undetected = [0, 0, 0]
-    for r, d, f in os.walk(path):
-        for img in f:
-            try:
-                image = Image.open(path + img)
-            except:
-                print('Open Error! Try again!')
-                continue
+    sc = Scrimg(config_path)
+    sc.detect_img_bulk(path)
+    #sc.detect_one()
+
+def find_code(inp, mapping):
+    for k, v in mapping.items():
+        if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
+            return k
+
+def divide(dict1, dict2):
+    dict_res = {}
+    for k, v in dict1.items():
+        dict_res[k] = dict1[k]/dict2[k]
+    return dict_res
+
+def summation(dict1):
+    summ = 0
+    for k, v in dict1.items():
+        summ += v
+    return summ
+
+class Scrimg:
+    def __init__(self, config_path):
+        self.num_of_classes, self.class_mapping = self.import_config(config_path)
+        self.img_count = self.initialize_statistics()
+        self.total_correctness = self.initialize_statistics()
+        self.detected = self.initialize_statistics()
+        self.total_confidence = self.initialize_statistics()
+        self.total_box = 0
+        self.yolo = YOLO()
+
+    @staticmethod
+    def import_config(path):
+        f = open(path, 'r')
+        classes = f.readlines()
+        num_of_classes = len(classes)
+        class_mapping = {}
+        for c in classes:
+            c = c.split()
+            class_mapping[c[2]] = [c[0], int(c[1])]  # eg 'L' : 'latin' 0
+        return num_of_classes, class_mapping
+
+    def initialize_statistics(self):
+        field = {}
+        for c in self.class_mapping:
+            field[c] = 0
+        return field
+
+    def extract_box(self, boxes, class_to_test):
+        correctness = 0
+        highest_confidence = '', 0
+        num_box = len(boxes)
+        self.total_box += num_box
+        detected = 0
+        if debug:
+            print("===Class to test: " + self.class_mapping[class_to_test][0] + ", found " + str(num_box) + " box(es).")
+        if num_box != 0:
+            confidences = self.initialize_statistics()
+            for b in range(num_box):
+                (l, t, r, bo) = boxes[b][1]
+                temp = boxes[b][0].split()
+                cls, confidence = find_code(temp[0], self.class_mapping), float(temp[1])
+                if debug:
+                    print("======Box #" + str(b) + ": " + cls + ' ' + str(confidence)
+                      + ' ' + "(" + str(l) + ',' + str(t) + '), ' + "(" + str(r) + ',' + str(bo) + ')')
+                if confidence > highest_confidence[1]:
+                    highest_confidence = cls, confidence
+                confidences[cls] += confidence
+                if cls == class_to_test:
+                    detected = 1
+
+            if highest_confidence[0] != class_to_test:
+                highest_confidence = ['', 0]
             else:
-                # Temporary
-                c = ''
-                if img[0] == 'L':
-                    c = 'latin'
-                    imgCount[0] += 1
-                elif img[0] == 'K':
-                    c = 'korean'
-                    imgCount[2] += 1
-                elif img[0] == 'T':
-                    c = 'thai'
-                    imgCount[1] += 1
-                r_image, accuracy = yolo.detect_image(image, c)
-                und = 0
-                if accuracy == 0:
-                    und = 1
-                if img[0] == 'L':
-                    total_accuracy[0] += accuracy
-                    undetected[0] += und
-                elif img[0] == 'K':
-                    total_accuracy[2] += accuracy
-                    undetected[2] += und
-                elif img[0] == 'T':
-                    total_accuracy[1] += accuracy
-                    undetected[1] += und
-                r_image.save( './out/' + img, 'PNG' )
-                print("acc: " + str(accuracy) + " tot: " + str(total_accuracy) + " img ct " + str(imgCount))
-                print(img + '^')
-    print("TOTAL_ACCURACY = "
-          + "LATIN:  " + str(total_accuracy[0]/imgCount[0]) + '\n'
-          + "THAI:   " + str(total_accuracy[1]/imgCount[1]) + '\n'
-          + "KOREAN: " + str(total_accuracy[2]/imgCount[2]) + '\n'
-          + "UNDETECTED: " + str(undetected) + '\n'
-          + "TOTAL:  " + str(sum(total_accuracy)/sum(imgCount)) + '\n')
+                correctness = confidences[class_to_test] / sum(confidences.values())
+        return correctness, highest_confidence, detected
 
-    yolo.close_session()
+    def detect_img_bulk(self, path):
+        thresh, iou, model_ver = self.yolo.get_params()
+        for r, d, f in os.walk(path):
+            for img in f:
+                try:
+                    r_image, boxes, time = self.yolo.detect_image(path + img)
+                    class_test = img[0]
+                    self.img_count[class_test] += 1
+                except:
+                    if debug:
+                        print(" Not an image.")
+                else:
+                    if debug:
+                        print("Image: " + img + " detected in " + str((time * 100000) // 100) + " milliseconds.")
+                    correctness, highest_confidence, detected = self.extract_box(boxes, class_test)
+                    self.total_correctness[class_test] += correctness
+                    try:
+                        self.total_confidence[highest_confidence[0]] += highest_confidence[1]
+                    except KeyError:
+                        pass
+                    self.detected[class_test] += detected
+                    if debug:
+                        r_image.save('./out/' + img, 'PNG')
 
-FLAGS = None
+        # Get logging data
+        f = open('./logs.txt', 'r+')
+        test_num = int(f.read().count('$'))
+        print(test_num)
+        f.close()
 
-def detect_img_one(yolo):
-    path = input("Input image location: ")
-    try:
-        image = Image.open(path)
-    except:
-        print('Open Error! Try again!')
-    else:
-        r_image, accuracy = yolo.detect_image(image)
-        #r_image.show()
-        r_image.save( './out/' + path, 'PNG' )
-    yolo.close_session()
+        log = ''
+        log += "TESTING RUN # " + str(test_num) + ' at ' + str(datetime.datetime.now()) + '\n'
+        log += 'WITH MODEL VERSION: ' + re.split('/|\.',model_ver)[1] + ', THRESH = ' + str(thresh) + ', IOU = ' + str(iou) + '\n'
+        log += "Num of images    : " + str(self.img_count) + ' with #boxes: ' + str(self.total_box) + '\n'
+        log += "Total confidence : " + str(self.total_confidence) + '\n'
+        log += "Total correctness: " + str(self.total_correctness) + '\n'
+        log += "Total detected   : " + str(self.detected) + '\n'
+        log += "Ave. confidence : " + str(divide(self.total_confidence, self.img_count)) + '\n'
+        log += "Ave. correctness: " + str(divide(self.total_correctness, self.img_count)) + '\n'
+        log += "Overall: System correctness = " + str(summation(self.total_correctness)/summation(self.img_count)) + '\n\n'
 
-if __name__ == '__main__':
-    detect_img(YOLO())
-    #detect_img_one(YOLO())
+        f = open('./logs.txt', 'a+')
+        print(log)
+        f.write('$\n' + log)
+        f.close()
+
+        self.yolo.close_session()
+
+    def detect_one(self):
+        s = input("Image to detect: ")
+        r_image, boxes, time = self.yolo.detect_image(s)
+        correctness, highest_confidence, detected = self.extract_box(boxes, 'K')
+        r_image.save('./out/' + '0000.png', 'PNG')
+
+
+main()
