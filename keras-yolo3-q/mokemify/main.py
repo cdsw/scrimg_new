@@ -100,6 +100,13 @@ def generateColour():
     blue = randint(0, 100)
     return (red, green, blue)
 
+def generateBgCol():
+    base = randint(200, 255)
+    red = randint( base - 5, base + 5 )
+    green = randint( base - 5, base + 5 )
+    blue = randint( base - 5, base + 5 )
+    return (red, green, blue)
+
 
 # GLOBALS
 initialisePaths()
@@ -120,7 +127,7 @@ def generateImage(scriptChoice, genAmount):
     global countoffset
     w = 256
     h = 256
-    img = Image.new( 'RGB', (w, h), color='white' )
+    img = Image.new( 'RGB', (w, h), color=generateBgCol() )
     fntChoice = fontRand( scriptChoice )
     fnt = ImageFont.truetype( fntChoice, randint( w // 12, w // 8 ) )
     d = ImageDraw.Draw( img )

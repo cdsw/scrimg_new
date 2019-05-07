@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0b18a5-348e-4631-a177-9375e13b26ad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="192" column="36" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
+            <state relative-caret-position="456">
+              <caret line="129" column="57" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -192,12 +191,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15625" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048611" side_tool="true" weight="0.32900944" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49513888" visible="true" weight="0.14976415" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49513888" visible="true" weight="0.21046077" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -205,12 +205,22 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49513888" visible="true" weight="0.14976415" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15625" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048611" side_tool="true" weight="0.32900944" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3278302" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -229,160 +239,62 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00037.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00013.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00004.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00273.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00246.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00193.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00271.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00277.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00280.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00283.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00289.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00286.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00292.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00295.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00298.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00244.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00235.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00229.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00220.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00217.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00187.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00157.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00169.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00124.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00109.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00031.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00282.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00294.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00228.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00216.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00204.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00165.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00177.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00126.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00108.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00081.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00039.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00030.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00012.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00287.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00269.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00230.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00206.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00185.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00164.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00134.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00110.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00038.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00037.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00013.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00004.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00273.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00246.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00193.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00271.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00277.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00280.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00283.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00289.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00286.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00292.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00295.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00298.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00244.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00235.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00229.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00220.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00217.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00187.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00157.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00169.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00124.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00109.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/T_00031.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00282.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00294.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00228.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00216.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00204.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00165.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00177.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00126.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00108.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00081.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00039.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00030.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/L_00012.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00287.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00269.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00230.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00206.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00185.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00164.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00134.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00110.jpg" />
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00038.jpg" />
     <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/filelist.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00005.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/output/K_00005.jpg" />
     <entry file="file://$PROJECT_DIR$/keras-yolo3-q/mokemify/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="192" column="36" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
+        <state relative-caret-position="456">
+          <caret line="129" column="57" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="57" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
