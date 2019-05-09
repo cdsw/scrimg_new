@@ -2,10 +2,10 @@
   <div id="app">
     <NavBar/>
     <CENTER>
-      <!-- <Welcome/> -->
+      <Welcome/>
       <!-- <upload/> -->
       <!-- <Process/> -->
-      <Output/>
+      <!-- <Output/> -->
     </CENTER>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
