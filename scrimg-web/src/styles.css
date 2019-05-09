@@ -1,0 +1,32 @@
+/* mobile 576px */
+/* tablet 768px */
+/* tablet-l 992px */
+/* width 1200px */
+
+@font-face {
+  font-family: LemonMilk;
+  src: url(./assets/fonts/LemonMilk.otf);
+}
+
+@font-face {
+  font-family: LemonMilkBold;
+  src: url(./assets/fonts/LemonMilkbold.otf);
+}
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("./assets/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  align-items: center;
+}
