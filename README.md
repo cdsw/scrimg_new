@@ -2,7 +2,7 @@ scrimg_new
 
 # Scrimg Web
 
-> A vue project
+> A vue project`
 
 ### Build setup
 
@@ -14,3 +14,9 @@ For a detailed explanation on how things work, check out the [guide][1] and [doc
 
 [1]: http://vuejs-templates.github.io/webpack/
 [2]: https://vue-loader-v14.vuejs.org/en/
+
+### Referrence
+
+[Image Uploader Tutorial][11]
+
+[11]: https://medium.freecodecamp.org/how-to-build-a-flexible-image-uploader-component-using-vue-js-2-0-5ee7fc77516
