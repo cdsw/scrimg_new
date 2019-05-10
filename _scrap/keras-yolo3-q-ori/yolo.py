@@ -17,6 +17,7 @@ from yolo3.model import yolo_eval, yolo_body, tiny_yolo_body
 from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
+import tensorflow as tf
 
 class YOLO(object):
     _defaults = {
@@ -41,7 +42,10 @@ class YOLO(object):
         self.__dict__.update(kwargs) # and update with user overrides
         self.class_names = self._get_class()
         self.anchors = self._get_anchors()
-        self.sess = K.get_session()
+        config = tf.ConfigProto()
+        config.gpu_options.per_process_gpu_memory_fraction = 0.5
+        #self.sess = K.get_session()#################################################################################
+        self.sess = K.tensorflow_backend.set_session(tf.Session(config=config))
         self.boxes, self.scores, self.classes = self.generate()
 
     def _get_class(self):

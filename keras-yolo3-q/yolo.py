@@ -16,17 +16,19 @@ from yolo3.model import yolo_eval, yolo_body, tiny_yolo_body
 from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
+import tensorflow as tf
+
 
 
 class YOLO(object):
     grid = 8
-    model_version = "T0504-2"
+    model_version = "T0508"
     _defaults = {
         "model_path": 'model_data/yolo-' + model_version + '.h5',
         "anchors_path": 'model_data/scrimg_anchors-' + model_version + '.txt',
         "classes_path": 'model_data/scrimg_classes.txt',
-        "score": 0.10,  # threshold
-        "iou": 0.05,
+        "score": 0.1,  # threshold
+        "iou": 0.35,
         "model_image_size": (32 * grid, 32 * grid),
         "gpu_num": 1,
     }
@@ -46,6 +48,9 @@ class YOLO(object):
         self.__dict__.update(kwargs)  # and update with user overrides
         self.class_names = self._get_class()
         self.anchors = self._get_anchors()
+        # config = tf.ConfigProto()
+        # config.gpu_options.per_process_gpu_memory_fraction = 0.5
+        # self.sess = K.tensorflow_backend.set_session(tf.Session(config=config))
         self.sess = K.get_session()
         self.boxes, self.scores, self.classes = self.generate()
 

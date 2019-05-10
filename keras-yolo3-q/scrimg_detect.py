@@ -1,34 +1,19 @@
 import os, datetime, re
 from yolo import YOLO
 
-debug = True
+debug = False
+print_trace = False
 
 def main():
     config_path = "./config.txt"
-    path = "./mokemify/output/"
+    path = "./dataset_generator/output/"
     sc = Scrimg(config_path)
     sc.detect_img_bulk(path)
     #sc.detect_one()
 
-def find_code(inp, mapping):
-    for k, v in mapping.items():
-        if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
-            return k
-
-def divide(dict1, dict2):
-    dict_res = {}
-    for k, v in dict1.items():
-        dict_res[k] = dict1[k]/dict2[k]
-    return dict_res
-
-def summation(dict1):
-    summ = 0
-    for k, v in dict1.items():
-        summ += v
-    return summ
-
 class Scrimg:
     def __init__(self, config_path):
+        Scrimg.initialize_paths()
         self.num_of_classes, self.class_mapping = self.import_config(config_path)
         self.img_count = self.initialize_statistics()
         self.total_correctness = self.initialize_statistics()
@@ -36,6 +21,30 @@ class Scrimg:
         self.total_confidence = self.initialize_statistics()
         self.total_box = 0
         self.yolo = YOLO()
+
+    @staticmethod
+    def find_code(inp, mapping):
+        for k, v in mapping.items():
+            if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
+                return k
+    @staticmethod
+    def divide(dict1, dict2):
+        dict_res = {}
+        for k, v in dict1.items():
+            dict_res[k] = dict1[k] / dict2[k]
+        return dict_res
+
+    @staticmethod
+    def summation(dict1):
+        summ = 0
+        for k, v in dict1.items():
+            summ += v
+        return summ
+
+    @staticmethod
+    def initialize_paths():
+        if not os.path.exists("./out/"):
+            os.makedirs("./out/")
 
     @staticmethod
     def import_config(path):
@@ -60,15 +69,15 @@ class Scrimg:
         num_box = len(boxes)
         self.total_box += num_box
         detected = 0
-        if debug:
+        if debug and print_trace:
             print("===Class to test: " + self.class_mapping[class_to_test][0] + ", found " + str(num_box) + " box(es).")
         if num_box != 0:
             confidences = self.initialize_statistics()
             for b in range(num_box):
                 (l, t, r, bo) = boxes[b][1]
                 temp = boxes[b][0].split()
-                cls, confidence = find_code(temp[0], self.class_mapping), float(temp[1])
-                if debug:
+                cls, confidence = Scrimg.find_code(temp[0], self.class_mapping), float(temp[1])
+                if debug and print_trace:
                     print("======Box #" + str(b) + ": " + cls + ' ' + str(confidence)
                       + ' ' + "(" + str(l) + ',' + str(t) + '), ' + "(" + str(r) + ',' + str(bo) + ')')
                 if confidence > highest_confidence[1]:
@@ -95,7 +104,7 @@ class Scrimg:
                     if debug:
                         print(" Not an image.")
                 else:
-                    if debug:
+                    if debug and print_trace:
                         print("Image: " + img + " detected in " + str((time * 100000) // 100) + " milliseconds.")
                     correctness, highest_confidence, detected = self.extract_box(boxes, class_test)
                     self.total_correctness[class_test] += correctness
@@ -120,9 +129,9 @@ class Scrimg:
         log += "Total confidence : " + str(self.total_confidence) + '\n'
         log += "Total correctness: " + str(self.total_correctness) + '\n'
         log += "Total detected   : " + str(self.detected) + '\n'
-        log += "Ave. confidence : " + str(divide(self.total_confidence, self.img_count)) + '\n'
-        log += "Ave. correctness: " + str(divide(self.total_correctness, self.img_count)) + '\n'
-        log += "Overall: System correctness = " + str(summation(self.total_correctness)/summation(self.img_count)) + '\n\n'
+        log += "Ave. confidence : " + str(Scrimg.divide(self.total_confidence, self.img_count)) + '\n'
+        log += "Ave. correctness: " + str(Scrimg.divide(self.total_correctness, self.img_count)) + '\n'
+        log += "Overall: System correctness = " + str(Scrimg.summation(self.total_correctness)/Scrimg.summation(self.img_count)) + '\n\n'
 
         f = open('./logs.txt', 'a+')
         print(log)
@@ -132,10 +141,17 @@ class Scrimg:
         self.yolo.close_session()
 
     def detect_one(self):
-        s = input("Image to detect: ")
-        r_image, boxes, time = self.yolo.detect_image(s)
-        correctness, highest_confidence, detected = self.extract_box(boxes, 'K')
-        r_image.save('./out/' + '0000.png', 'PNG')
+        import datetime
+        while True:
+            s = input("Image to detect: (empty to exit)")
+            if s == '':
+                break
+            try:
+                r_image, boxes, time = self.yolo.detect_image(s)
+                correctness, highest_confidence, detected = self.extract_box(boxes, 'K')
+                r_image.save('./out/' + str(datetime.datetime.timestamp()) + '.png', 'PNG')
+            except:
+                print('Image cannot be processed.')
 
 
 main()
