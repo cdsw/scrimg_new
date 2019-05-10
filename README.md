@@ -2,13 +2,15 @@ scrimg_new
 
 # Scrimg Web
 
-> A vue project`
+> A vue project
 
 ### Build setup
 
 serve with hot reload at localhost:8080
 ```
 yarn serve
+# or
+npm run dev
 ```
 For a detailed explanation on how things work, check out the [guide][1] and [docs for vue-loader][2].
 
