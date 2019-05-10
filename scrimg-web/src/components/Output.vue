@@ -5,7 +5,7 @@
     <br>
     <b-button>SAVE OUTPUT</b-button>
     <br>
-    <b-button class="trans">DO AGAIN</b-button>
+    <b-button class="trans" onclick="window.location.href='../upload'">DO AGAIN</b-button>
   </div>
 </template>
 

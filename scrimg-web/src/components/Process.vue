@@ -5,7 +5,7 @@
     <br>
     <b-button>PROCESS</b-button>
     <br>
-    <b-button class="trans">GO BACK</b-button>
+    <b-button class="trans" onclick="window.location.href='../upload'">GO BACK</b-button>
   </div>
 </template>
 
