@@ -12,6 +12,8 @@ from keras.callbacks import TensorBoard, ModelCheckpoint, ReduceLROnPlateau, Ear
 from yolo3.model import preprocess_true_boxes, tiny_yolo_body, yolo_loss
 from yolo3.utils import get_random_data
 
+#import tensorflowjs as tfjs
+
 
 class Trainer:
     def __init__(self, img_size, version, annotation_path='dataset_generator/annotation.txt',
@@ -36,7 +38,7 @@ class Trainer:
         self.early_stopping = EarlyStopping(monitor='val_loss', min_delta=0, patience=10, verbose=1)
         num_val, num_train, self.lines = self.randomize_annotations()
         num_epoch_init = 0
-        num_epoch = 10
+        num_epoch = 0
         self.train(num_val, num_train, num_epoch_init, num_epoch)
 
     def randomize_annotations(self):
@@ -58,7 +60,7 @@ class Trainer:
                 # use custom yolo_loss Lambda layer.
                 'yolo_loss': lambda y_true, y_pred: y_pred})
 
-            batch_size = 32
+            batch_size = 64
             print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
             self.model.fit_generator(
                 self.data_generator_wrapper(self.lines[:num_train], batch_size, self.input_shape, self.anchors, self.num_classes),
@@ -70,6 +72,7 @@ class Trainer:
                 initial_epoch=0,
                 callbacks=[self.logging, self.checkpoint])
             self.model.save_weights(self.log_dir + 'init-yolo-' + self.version + '.h5')
+            #tfjs.converters.save_keras_model(self.model, 'E:/tfjs-----/')
 
         # Unfreeze and continue training, to fine-tune.
         # Train longer if the result is not good.
@@ -92,6 +95,7 @@ class Trainer:
                 initial_epoch=num_epoch_init,
                 callbacks=[self.logging, self.checkpoint, self.reduce_lr, self.early_stopping])
             self.model.save_weights(self.log_dir + 'trained_weights_final.h5')
+            #tfjs.converters.save_keras_model(self.model, 'E:/tfjs-----/')
 
         # Further training if needed.
 
