@@ -2,13 +2,13 @@
   <div>
     <!-- Image and text -->
     <b-navbar variant="faded" type="light">
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="../">
         <img alt="icon" height="30" src="../assets/icon.png">
         SCRIMG
       </b-navbar-brand>
 
       <b-navbar-nav class="ml-auto">
-        <b-navbar-brand href="#" align="right">
+        <b-navbar-brand href="https://github.com/cdsw/scrimg_new" align="right">
           <!-- <img v-bind:src="git" alt="git"> -->
           <img alt="git logo" height="26" src="../assets/git.png">
         </b-navbar-brand>

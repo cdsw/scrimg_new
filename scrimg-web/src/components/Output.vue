@@ -20,7 +20,7 @@ export default {
   margin-top: 100px;
   margin-bottom: 10px;
   font-family: LemonMilkBold;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -32,7 +32,7 @@ export default {
 
 @media (max-width: 576px) {
   .bold-text {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 50px;
   }
 }

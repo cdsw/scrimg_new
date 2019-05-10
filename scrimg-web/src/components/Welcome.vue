@@ -6,7 +6,7 @@
       <br>using Image Recognition and
       <br>Neural Network
     </div>
-    <b-button class="trans">EXPLORE</b-button>
+    <b-button class="trans" onclick="window.location.href='../upload'">EXPLORE</b-button>
   </div>
 </template>
 
