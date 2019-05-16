@@ -1,0 +1,87 @@
+<template>
+  <v-app id="app" class="mt-0">
+    <v-container grid-list-xl>
+      <image-input v-model="avatar">
+        <div slot="activator">
+          <v-avatar size="150px" v-ripple v-if="!avatar" class="grey lighten-3 mb-3">
+            <span>Click to add avatar</span>
+          </v-avatar>
+          <v-avatar size="150px" v-ripple v-else class="mb-3">
+            <img :src="avatar.imageURL" alt="avatar">
+          </v-avatar>
+        </div>
+      </image-input>
+      <v-slide-x-transition>
+        <div v-if="avatar && saved == false">
+          <v-btn class="primary" @click="uploadImage" :loading="saving">Save Avatar</v-btn>
+        </div>
+      </v-slide-x-transition>
+    </v-container>
+  </v-app>
+</template>
+
+<script>
+import ImageInput from "./components/ImageInput.vue";
+
+export default {
+  name: "app",
+  data() {
+    return {
+      avatar: null,
+      saving: false,
+      saved: false
+    };
+  },
+  components: {
+    ImageInput: ImageInput
+  },
+  watch: {
+    avatar: {
+      handler: function() {
+        this.saved = false;
+      },
+      deep: true
+    }
+  },
+  methods: {
+    uploadImage() {
+      this.saving = true;
+      setTimeout(() => this.savedAvatar(), 1000);
+    },
+    savedAvatar() {
+      this.saving = false;
+      this.saved = true;
+    }
+  }
+};
+</script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
