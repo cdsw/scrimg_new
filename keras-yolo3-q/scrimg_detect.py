@@ -1,26 +1,22 @@
 import os, datetime, re
-from yolo import YOLO
+from utilities.yolo import YOLO
 
-debug = False
+debug = True
 print_trace = False
 
-def main():
-    config_path = "./config.txt"
-    path = "./dataset_generator/output/"
-    sc = Scrimg(config_path)
-    sc.detect_img_bulk(path)
-    #sc.detect_one()
-
 class Scrimg:
-    def __init__(self, config_path):
-        Scrimg.initialize_paths()
+    def __init__(self, config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num):
+        self.version = version
+        self.initialize_paths()
         self.num_of_classes, self.class_mapping = self.import_config(config_path)
         self.img_count = self.initialize_statistics()
         self.total_correctness = self.initialize_statistics()
         self.detected = self.initialize_statistics()
         self.total_confidence = self.initialize_statistics()
         self.total_box = 0
-        self.yolo = YOLO()
+        self.threshold = threshold
+        self.iou = iou
+        self.yolo = YOLO(version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
     @staticmethod
     def find_code(inp, mapping):
@@ -31,7 +27,10 @@ class Scrimg:
     def divide(dict1, dict2):
         dict_res = {}
         for k, v in dict1.items():
-            dict_res[k] = dict1[k] / dict2[k]
+            try:
+                dict_res[k] = dict1[k] / dict2[k]
+            except ZeroDivisionError:
+                dict_res[k] = 0
         return dict_res
 
     @staticmethod
@@ -40,11 +39,6 @@ class Scrimg:
         for k, v in dict1.items():
             summ += v
         return summ
-
-    @staticmethod
-    def initialize_paths():
-        if not os.path.exists("./out/"):
-            os.makedirs("./out/")
 
     @staticmethod
     def import_config(path):
@@ -56,6 +50,10 @@ class Scrimg:
             c = c.split()
             class_mapping[c[2]] = [c[0], int(c[1])]  # eg 'L' : 'latin' 0
         return num_of_classes, class_mapping
+
+    def initialize_paths(self):
+        if not os.path.exists("./out-" + self.version + "/"):
+            os.makedirs("./out-" + self.version + "/")
 
     def initialize_statistics(self):
         field = {}
@@ -93,7 +91,6 @@ class Scrimg:
         return correctness, highest_confidence, detected
 
     def detect_img_bulk(self, path):
-        thresh, iou, model_ver = self.yolo.get_params()
         for r, d, f in os.walk(path):
             for img in f:
                 try:
@@ -114,26 +111,30 @@ class Scrimg:
                         pass
                     self.detected[class_test] += detected
                     if debug:
-                        r_image.save('./out/' + img, 'PNG')
+                        r_image.save('./out-' + self.version + '/' + img, 'PNG')
 
         # Get logging data
-        f = open('./logs.txt', 'r+')
+        f = open('./utilities/logs.txt', 'r+')
         test_num = int(f.read().count('$'))
         print(test_num)
         f.close()
 
         log = ''
         log += "TESTING RUN # " + str(test_num) + ' at ' + str(datetime.datetime.now()) + '\n'
-        log += 'WITH MODEL VERSION: ' + re.split('/|\.',model_ver)[1] + ', THRESH = ' + str(thresh) + ', IOU = ' + str(iou) + '\n'
+        log += 'WITH MODEL VERSION: ' + self.version + ', THRESH = ' + str(self.threshold) \
+               + ', IOU = ' + str(self.iou) + '\n'
         log += "Num of images    : " + str(self.img_count) + ' with #boxes: ' + str(self.total_box) + '\n'
         log += "Total confidence : " + str(self.total_confidence) + '\n'
         log += "Total correctness: " + str(self.total_correctness) + '\n'
         log += "Total detected   : " + str(self.detected) + '\n'
         log += "Ave. confidence : " + str(Scrimg.divide(self.total_confidence, self.img_count)) + '\n'
         log += "Ave. correctness: " + str(Scrimg.divide(self.total_correctness, self.img_count)) + '\n'
-        log += "Overall: System correctness = " + str(Scrimg.summation(self.total_correctness)/Scrimg.summation(self.img_count)) + '\n\n'
+        if Scrimg.summation(self.img_count) != 0:
+            log += "Overall: System correctness = " + str(Scrimg.summation(self.total_correctness)/Scrimg.summation(self.img_count)) + '\n\n'
+        else:
+            log += "Overall: System correctness = 0 \n\n"
 
-        f = open('./logs.txt', 'a+')
+        f = open('./utilities/logs.txt', 'a+')
         print(log)
         f.write('$\n' + log)
         f.close()
@@ -141,7 +142,6 @@ class Scrimg:
         self.yolo.close_session()
 
     def detect_one(self):
-        import datetime
         while True:
             s = input("Image to detect: (empty to exit)")
             if s == '':
@@ -149,9 +149,23 @@ class Scrimg:
             try:
                 r_image, boxes, time = self.yolo.detect_image(s)
                 correctness, highest_confidence, detected = self.extract_box(boxes, 'K')
-                r_image.save('./out/' + str(datetime.datetime.timestamp()) + '.png', 'PNG')
+                r_image.save('./out/' + str("datetime") + '.png', 'PNG')
             except:
                 print('Image cannot be processed.')
 
+if __name__ == "__main__":
+    version = 'T0518'
+    grid = 8
+    model_path= 'model_data/yolo-' + version + '.h5'
+    anchors_path= 'model_data/scrimg_anchors-' + version + '.txt'
+    classes_path= 'model_data/scrimg_classes.txt'
+    threshold= 0.1
+    iou= 0.35
+    model_image_size= (32 * grid, 32 * grid)
+    gpu_num= 1
+    config_path = "./utilities/config.txt"
+    path = "./dataset/output/"
+    sc = Scrimg(config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
-main()
+    sc.detect_img_bulk(path)
+    #sc.detect_one()

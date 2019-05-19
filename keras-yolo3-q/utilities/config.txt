@@ -1,0 +1,3 @@
+latin 0 L
+thai 1 T
+korean 2 K
