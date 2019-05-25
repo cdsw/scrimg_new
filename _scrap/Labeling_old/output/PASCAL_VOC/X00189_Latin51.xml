@@ -1,0 +1,26 @@
+<annotation>
+  <folder>input</folder>
+  <filename>X00189_Latin51.jpg</filename>
+  <path>/Users/squidpurin/Documents/GitHub/scrimg_new/keras-yolo3-q/Labeling/input/X00189_Latin51.jpg</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>352</width>
+    <height>352</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>latin</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>117</xmin>
+      <ymin>122</ymin>
+      <xmax>159</xmax>
+      <ymax>139</ymax>
+    </bndbox>
+  </object>
+</annotation>
