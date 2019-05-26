@@ -27,7 +27,7 @@ class ModelConverter:
         self.config_path = cfg_path
         self.weights_path = wt_path
         self.output_path = out_path
-        self.output_img = output_img
+        self.output_img_path = output_img
 
     def set_version(self, version):
         self.version = version
@@ -230,7 +230,7 @@ class ModelConverter:
         if len(out_index)==0: out_index.append(len(all_layers)-1)
         model = Model(inputs=input_layer, outputs=[all_layers[i] for i in out_index])
         print(model.summary())
-        weights_only = True
+        weights_only = False
         if weights_only:
             model.save_weights('{}'.format(self.output_path))
             print('Saved Keras weights to {}'.format(self.output_path))
@@ -246,8 +246,8 @@ class ModelConverter:
         if remaining_weights > 0:
             print('Warning: {} unused weights'.format(remaining_weights))
 
-        if self.output_img != '':
-            plot(model, to_file=self.output_img.format(output_root), show_shapes=True)
+        if self.output_img_path != '':
+            plot(model, to_file=self.output_img_path.format(output_root), show_shapes=True)
             print('Saved model plot to sample.png'.format(output_root))
 
 

@@ -12,6 +12,8 @@ from keras.callbacks import TensorBoard, ModelCheckpoint, ReduceLROnPlateau, Ear
 from utilities.yolo3.model import preprocess_true_boxes, tiny_yolo_body, yolo_loss
 from utilities.yolo3.utils import get_random_data
 
+import tensorflowjs as tfjs
+
 class Trainer:
     def __init__(self, img_size, version, num_epoch_init, num_epoch_full, annotation_path, anchors_path, model_path,
                  log_dir='logs/', classes_path='model_data/scrimg_classes.txt'):
@@ -48,7 +50,7 @@ class Trainer:
         num_train = len(lines) - num_val
         return num_val, num_train, lines
 
-    def train(self):
+    def train(self, tfjs_ = False):
         # Train with frozen layers first, to get a stable loss.
         # Adjust num epochs to your dataset. This step is enough to obtain a not bad model.
         final_model_path = None
@@ -69,7 +71,9 @@ class Trainer:
                 initial_epoch=0,
                 callbacks=[self.logging, self.checkpoint])
             final_model_path = self.log_dir + 'init-yolo-' + self.version + '.h5'
-            self.model.save_weights(final_model_path)
+            if tfjs_:
+                tfjs.converters.save_keras_model(self.model, './model_data/yolo-' + self.version)
+            self.model.save(final_model_path)
 
 
         # Unfreeze and continue training, to fine-tune.
@@ -93,8 +97,9 @@ class Trainer:
                 initial_epoch=self.num_epoch_init,
                 callbacks=[self.logging, self.checkpoint, self.reduce_lr, self.early_stopping])
             final_model_path = self.log_dir + 'final-yolo-' + self.version + '.h5'
-            self.model.save_weights(final_model_path)
-            #tfjs.converters.save_keras_model(self.model, 'E:/tfjs-----/')
+            self.model.save(final_model_path)
+            if tfjs_:
+                tfjs.converters.save_keras_model(self.model, './model_data/yolo-' + self.version)
         return final_model_path, self.log_dir
 
         # Further training if needed.

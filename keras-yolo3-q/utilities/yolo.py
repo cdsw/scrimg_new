@@ -18,7 +18,6 @@ import os
 from keras.utils import multi_gpu_model
 
 
-
 class YOLO(object):
 
     def __init__(self, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num):

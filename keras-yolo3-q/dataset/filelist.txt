@@ -1,0 +1,6 @@
+./dataset/output/L_0000000-T0518.jpg
+./dataset/output/L_0000001-T0518.jpg
+./dataset/output/T_0000002-T0518.jpg
+./dataset/output/T_0000003-T0518.jpg
+./dataset/output/K_0000004-T0518.jpg
+./dataset/output/K_0000005-T0518.jpg

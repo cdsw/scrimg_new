@@ -1,20 +1,9 @@
-# Initiate training x
-# Generate dataset x
-# Generate Kmeans from dataset x
-# edit cfg file
-# run conversion
-# set training version
-# do training
-# overwrite training log
-
-# run detection
 
 import utilities.generate_dataset as gen
 import utilities.kmeans as km
 import utilities.convert_dn2h5 as convd
 import utilities.train as tr
 from shutil import copyfile, rmtree
-
 class TrainingInitiator:
     def __init__(self, generator, k_means, version, converter ):
         self.generator = generator
@@ -51,8 +40,8 @@ class TrainingInitiator:
         #Generate H5 file
         self.converter.convert()
 
-    def train(self, model_path):
-        final_model_path, logdir = self.trainer.train()
+    def train(self, model_path, tfjs_=False):
+        final_model_path, logdir = self.trainer.train(tfjs_)
         copyfile(final_model_path, model_path)
         rmtree(logdir)
 
@@ -74,17 +63,17 @@ if __name__ == "__main__":
     converter = convd.ModelConverter(version, config_path, weights_path, output_path, output_img)
 
     #Initial setting
-    images_to_generate = 183
+    images_to_generate = 2
     initiator = TrainingInitiator(generator, k_means, version, converter)
     initiator.generateImage(images_to_generate)
 
     #Training parameters
     training_image_size = 256
-    num_epoch_init, num_epoch_full = 1, 1
+    num_epoch_init, num_epoch_full = 1,1
     anchors_path = 'model_data/scrimg_anchors-' + version + '.txt'
     model_path = 'model_data/yolo-' + version + '.h5'
     trainer = tr.Trainer(training_image_size, version, num_epoch_init, num_epoch_full, annot_filepath, anchors_path, model_path)
 
     #Training start
     initiator.assignTrainer(trainer)
-    initiator.train(model_path)
+    initiator.train(model_path, True)

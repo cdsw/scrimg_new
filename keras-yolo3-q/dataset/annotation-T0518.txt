@@ -1,0 +1,6 @@
+./dataset/output/L_0000000-T0518.jpg 6,150,182,181,0
+./dataset/output/L_0000001-T0518.jpg 3,49,271,90,0
+./dataset/output/T_0000002-T0518.jpg 8,97,272,119,1
+./dataset/output/T_0000003-T0518.jpg 3,144,185,168,1
+./dataset/output/K_0000004-T0518.jpg 9,138,304,176,2
+./dataset/output/K_0000005-T0518.jpg 3,138,146,160,2

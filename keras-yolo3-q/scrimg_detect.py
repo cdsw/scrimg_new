@@ -1,17 +1,17 @@
-import os, datetime, re
+import os, datetime, cv2
 from utilities.yolo import YOLO
 
 debug = True
 print_trace = False
 
-class Scrimg:
+class ScrimgDetector:
     def __init__(self, config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num):
         self.version = version
         self.initialize_paths()
         self.num_of_classes, self.class_mapping = self.import_config(config_path)
         self.img_count = self.initialize_statistics()
         self.total_correctness = self.initialize_statistics()
-        self.detected = self.initialize_statistics()
+        self.detected_image_count = self.initialize_statistics()
         self.total_confidence = self.initialize_statistics()
         self.total_box = 0
         self.threshold = threshold
@@ -24,7 +24,7 @@ class Scrimg:
             if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
                 return k
     @staticmethod
-    def divide(dict1, dict2):
+    def divide_dict(dict1, dict2):
         dict_res = {}
         for k, v in dict1.items():
             try:
@@ -34,7 +34,7 @@ class Scrimg:
         return dict_res
 
     @staticmethod
-    def summation(dict1):
+    def sum_dict(dict1):
         summ = 0
         for k, v in dict1.items():
             summ += v
@@ -74,7 +74,7 @@ class Scrimg:
             for b in range(num_box):
                 (l, t, r, bo) = boxes[b][1]
                 temp = boxes[b][0].split()
-                cls, confidence = Scrimg.find_code(temp[0], self.class_mapping), float(temp[1])
+                cls, confidence = ScrimgDetector.find_code(temp[0], self.class_mapping), float(temp[1])
                 if debug and print_trace:
                     print("======Box #" + str(b) + ": " + cls + ' ' + str(confidence)
                       + ' ' + "(" + str(l) + ',' + str(t) + '), ' + "(" + str(r) + ',' + str(bo) + ')')
@@ -109,7 +109,7 @@ class Scrimg:
                         self.total_confidence[highest_confidence[0]] += highest_confidence[1]
                     except KeyError:
                         pass
-                    self.detected[class_test] += detected
+                    self.detected_image_count[class_test] += detected
                     if debug:
                         r_image.save('./out-' + self.version + '/' + img, 'PNG')
 
@@ -126,11 +126,11 @@ class Scrimg:
         log += "Num of images    : " + str(self.img_count) + ' with #boxes: ' + str(self.total_box) + '\n'
         log += "Total confidence : " + str(self.total_confidence) + '\n'
         log += "Total correctness: " + str(self.total_correctness) + '\n'
-        log += "Total detected   : " + str(self.detected) + '\n'
-        log += "Ave. confidence : " + str(Scrimg.divide(self.total_confidence, self.img_count)) + '\n'
-        log += "Ave. correctness: " + str(Scrimg.divide(self.total_correctness, self.img_count)) + '\n'
-        if Scrimg.summation(self.img_count) != 0:
-            log += "Overall: System correctness = " + str(Scrimg.summation(self.total_correctness)/Scrimg.summation(self.img_count)) + '\n\n'
+        log += "Total detected   : " + str(self.detected_image_count) + '\n'
+        log += "Ave. confidence : " + str(ScrimgDetector.divide_dict(self.total_confidence, self.img_count)) + '\n'
+        log += "Ave. correctness: " + str(ScrimgDetector.divide_dict(self.total_correctness, self.img_count)) + '\n'
+        if ScrimgDetector.sum_dict(self.img_count) != 0:
+            log += "Overall: System correctness = " + str(ScrimgDetector.sum_dict(self.total_correctness) / ScrimgDetector.sum_dict(self.img_count)) + '\n\n'
         else:
             log += "Overall: System correctness = 0 \n\n"
 
@@ -149,12 +149,22 @@ class Scrimg:
             try:
                 r_image, boxes, time = self.yolo.detect_image(s)
                 correctness, highest_confidence, detected = self.extract_box(boxes, 'K')
-                r_image.save('./out/' + str("datetime") + '.png', 'PNG')
+                r_image.save('./out-'+self.version + '/' + str("datetime") + '.png', 'PNG')
             except:
                 print('Image cannot be processed.')
 
+    def detect_from_gui(self, path):
+        try:
+            r_image, boxes, time = self.yolo.detect_image(path)
+            filename = './out-' + self.version + '/' + str("temp") + '.png'
+            r_image.save(filename, 'PNG')
+            return filename
+        except:
+            print('Image cannot be processed.')
+            return './utilities/empty.png'
+
 if __name__ == "__main__":
-    version = 'T0518'
+    version = 'T0515'
     grid = 8
     model_path= 'model_data/yolo-' + version + '.h5'
     anchors_path= 'model_data/scrimg_anchors-' + version + '.txt'
@@ -165,7 +175,7 @@ if __name__ == "__main__":
     gpu_num= 1
     config_path = "./utilities/config.txt"
     path = "./dataset/output/"
-    sc = Scrimg(config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
+    sc = ScrimgDetector(config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
-    sc.detect_img_bulk(path)
-    #sc.detect_one()
+    #sc.detect_img_bulk(path)
+    sc.detect_one()

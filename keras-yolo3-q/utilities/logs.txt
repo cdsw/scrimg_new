@@ -382,3 +382,14 @@ Total detected   : {'L': 6767, 'T': 6189, 'K': 6757}
 Ave. confidence : {'L': 0.9063988095237449, 'T': 0.8042728571428215, 'K': 0.9046085714285214}
 Ave. correctness: {'L': 0.9585875878036563, 'T': 0.88402, 'K': 0.9650012713363845}
 Overall: System correctness = 0.9359300398412467
+$
+TESTING RUN # 35 at 2019-05-20 10:58:12.441356
+WITH MODEL VERSION: T0515, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 100, 'T': 100, 'K': 100} with #boxes: 271
+Total confidence : {'L': 91.83999999999995, 'T': 73.94999999999997, 'K': 90.13999999999996}
+Total correctness: {'L': 96.0, 'T': 81.0, 'K': 94.0}
+Total detected   : {'L': 96, 'T': 81, 'K': 94}
+Ave. confidence : {'L': 0.9183999999999994, 'T': 0.7394999999999997, 'K': 0.9013999999999995}
+Ave. correctness: {'L': 0.96, 'T': 0.81, 'K': 0.94}
+Overall: System correctness = 0.9033333333333333
+
