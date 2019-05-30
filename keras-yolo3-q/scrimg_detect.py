@@ -19,12 +19,12 @@ class ScrimgDetector:
         self.yolo = YOLO(version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
     @staticmethod
-    def find_code(inp, mapping):
+    def find_code(inp, mapping): #to test. I/O test: edge coverage
         for k, v in mapping.items():
             if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
                 return k
     @staticmethod
-    def divide_dict(dict1, dict2):
+    def divide_dict(dict1, dict2): #to test. I/O test, Exception test: edge coverage
         dict_res = {}
         for k, v in dict1.items():
             try:
@@ -33,7 +33,7 @@ class ScrimgDetector:
                 dict_res[k] = 0
         return dict_res
 
-    @staticmethod
+    @staticmethod #to test. node coverage
     def sum_dict(dict1):
         summ = 0
         for k, v in dict1.items():
@@ -41,7 +41,7 @@ class ScrimgDetector:
         return summ
 
     @staticmethod
-    def import_config(path):
+    def import_config(path): #to test. 
         f = open(path, 'r')
         classes = f.readlines()
         num_of_classes = len(classes)
@@ -177,5 +177,5 @@ if __name__ == "__main__":
     path = "./dataset/output/"
     sc = ScrimgDetector(config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
-    #sc.detect_img_bulk(path)
-    sc.detect_one()
+    sc.detect_img_bulk(path)
+    #sc.detect_one()

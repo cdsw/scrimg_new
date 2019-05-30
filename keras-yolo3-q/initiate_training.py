@@ -63,7 +63,7 @@ if __name__ == "__main__":
     converter = convd.ModelConverter(version, config_path, weights_path, output_path, output_img)
 
     #Initial setting
-    images_to_generate = 2
+    images_to_generate = 25
     initiator = TrainingInitiator(generator, k_means, version, converter)
     initiator.generateImage(images_to_generate)
 

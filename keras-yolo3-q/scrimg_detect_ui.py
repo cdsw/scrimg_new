@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from scrimg_detect import *
 
 class ScrimgDetect_UI(QWidget):
-    def __init__(self, camera_index=0, fps=30):
+    def __init__(self):
         super().__init__()
         self.setWindowTitle("Scrimg Detect")
         self.btn_upload = QPushButton("Upload Image")
@@ -31,8 +31,8 @@ class ScrimgDetect_UI(QWidget):
         self.layout_main.addLayout(self.layout_images)
         self.setLayout(self.layout_main)
 
-        self.btn_upload.clicked.connect(self.addpic)
-        self.btn_detect.clicked.connect(self.addpic2)
+        self.btn_upload.clicked.connect(self.upload)
+        self.btn_detect.clicked.connect(self.detect)
         self.btn_detect.setEnabled(False)
         self.btn_reset.clicked.connect(self.clearh)
         self.btn_save.clicked.connect(self.saveto)
@@ -55,7 +55,7 @@ class ScrimgDetect_UI(QWidget):
         self.sc = ScrimgDetector(config_path, version, model_path, anchors_path, classes_path, threshold, iou,
                             model_image_size, gpu_num)
 
-    def addpic(self):
+    def upload(self): #to test. Exception test: edge, node coverage
         self.inp_filename, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "", "Image Files (*.png *.jpg)")
         try:
             ph = QPixmap(self.inp_filename)
@@ -64,15 +64,17 @@ class ScrimgDetect_UI(QWidget):
             self.label_output.setPixmap(self.empty)
         except:
             print("Error reading image")
+            QMessageBox.about(self, "Error", "Error reading image. Image not loaded.")
             self.btn_detect.setEnabled(False)
 
-    def addpic2(self):
+    def detect(self): #to test. Exception test: edge, node coverage
         try:
             self.out_filename = self.sc.detect_from_gui(self.inp_filename)
             ph = QPixmap(self.out_filename)
             self.label_output.setPixmap(ph.scaled(750, 750))
             self.btn_save.setEnabled(True)
         except:
+            QMessageBox.about(self, "Error", "Error detecting image.")
             print("Error detecting image")
 
     def clearh(self):
@@ -86,9 +88,11 @@ class ScrimgDetect_UI(QWidget):
         fileName, _ = QFileDialog.getSaveFileName(self,"QFileDialog.getSaveFileName()","","Image Files (*.png *.jpg)")
         if fileName != '':
             cv2.imwrite(fileName, cv2.imread(self.out_filename))
+            QMessageBox.about(self, "Saved", "Image saved to " + fileName + ".")
 
-app = QApplication([])
-scrimg = ScrimgDetect_UI()
-scrimg.initializeScrimg()
-scrimg.show()
-app.exec()
+if __name__ == "__main__":
+    app = QApplication([])
+    scrimg = ScrimgDetect_UI()
+    scrimg.initializeScrimg()
+    scrimg.show()
+    app.exec()

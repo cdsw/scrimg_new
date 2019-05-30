@@ -109,6 +109,10 @@ class DatasetGenerator:
         base = randint(230, 255)
         if mode == 0 or mode == 'bw':
             red = green = blue = base
+        elif mode == 'm':
+            red = 255
+            green = 255
+            blue = 255
         else:
             red = randint(base - 5, base + 5)
             green = randint(base - 5, base + 5)
@@ -116,12 +120,16 @@ class DatasetGenerator:
         return red, green, blue
 
     @staticmethod
-    def applyBlur(image):
-        blurFactor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.5,
-                      0.6, 0.8, 1, 1.2]
-        num = randint(0, len(blurFactor) - 1)
-        blurred_image = image.filter(ImageFilter.GaussianBlur(radius=blurFactor[num]))
-        return blurred_image
+    def applyBlur(image, mode):
+        if mode == 'm':
+            return image
+        else:
+            blurFactor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.5,
+                          0.6, 0.8, 1, 1.2]
+            num = randint(0, len(blurFactor) - 1)
+            blurred_image = image.filter(ImageFilter.GaussianBlur(radius=blurFactor[num]))
+            return blurred_image
+
 
     def generateAnnotation(self, filename, script_class, topLeft, bottomRight):
         annot_file = open('./dataset/annotation-' + self.version + '.txt', 'a')
@@ -171,7 +179,7 @@ class DatasetGenerator:
             d.rectangle([point3, point4], fill='red')
             d.text(point3, labelText, font=labelFont, fill='white')
 
-        img = DatasetGenerator.applyBlur(img)
+        img = DatasetGenerator.applyBlur(img, mode)
 
         # ==============================
         filename = "./dataset/output/" + self.scriptCodes[scriptChoice] + "_" + \

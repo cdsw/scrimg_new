@@ -393,3 +393,14 @@ Ave. confidence : {'L': 0.9183999999999994, 'T': 0.7394999999999997, 'K': 0.9013
 Ave. correctness: {'L': 0.96, 'T': 0.81, 'K': 0.94}
 Overall: System correctness = 0.9033333333333333
 
+$
+TESTING RUN # 36 at 2019-05-30 12:42:23.276599
+WITH MODEL VERSION: T0515, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 25, 'T': 25, 'K': 25} with #boxes: 72
+Total confidence : {'L': 23.9, 'T': 20.810000000000002, 'K': 23.169999999999998}
+Total correctness: {'L': 24.0, 'T': 22.617283950617285, 'K': 24.0}
+Total detected   : {'L': 24, 'T': 23, 'K': 24}
+Ave. confidence : {'L': 0.956, 'T': 0.8324000000000001, 'K': 0.9268}
+Ave. correctness: {'L': 0.96, 'T': 0.9046913580246914, 'K': 0.96}
+Overall: System correctness = 0.9415637860082305
+
