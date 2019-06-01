@@ -16,7 +16,7 @@ import os
 ######################################################################################################
 
 # TEST 1. Have a sample file like words, check with the output list whether it contains all the words.
-# coverage: all-path, type: i/o
+# coverage: all-node, type: i/o
 # wordDirs: paths to word pool file
 # a word pool file consists of words delimited by newline
 
