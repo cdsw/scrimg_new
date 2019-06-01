@@ -19,10 +19,9 @@ import os
 ######################################################################################################
 
 # TEST 1. Have a sample file like words, check with the output list whether it contains all the words.
-# coverage: all-node, type: i/o
+# coverage: all-edge, type: i/o
 # wordDirs: paths to word pool file
 # a word pool file consists of words delimited by newline
-
 def importWords(wordDirs):
     words = []
     for dir in wordDirs:
@@ -84,40 +83,96 @@ def import_config(path):
 
 
 # TEST 5. Get language code from the mapping (dict).
-# Coverage: edge, type: i/o
+# Coverage: edge, type: i/o, exception
 # see import_config above for mapping format
 def find_code(inp, mapping):
     for k, v in mapping.items():
         if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
             return k
+    raise ValueError
 
 
-# TEST 6. Get the multiplication result of values in each categories in three dicts
-# e.g. dict1 = {'L' : 0.4, 'K' : 0.7}, dict2 = {'L' : 0.1, 'K' : 0.1}, dict3 = {'L' : 0.1, 'K' : 0.1},
-# return dict_res = {'L' : 0.004, 'K' : 0.007}
-# Coverage: edge, type: Exception test, i/o test
-def mult_dict(dict1, dict2, dict3):
+# TEST 6. Get the division result of values in each categories in 2 dicts
+# e.g. dict1 = {'L' : 0.4, 'K' : 0.7}, dict2 = {'L' : 0.1, 'K' : 0.1},
+# return dict_res = {'L' : 4, 'K' : 7}
+# Coverage: edge, type: None Exception test, i/o test
+def divide_dict(dict1, dict2):
     dict_res = {}
     for k, v in dict1.items():
         try:
-            dict_res[k] = dict1[k] * dict2[k] * dict3[k]
+            dict_res[k] = dict1[k] / dict2[k]
         except ZeroDivisionError:
             dict_res[k] = 0
     return dict_res
 
-
-######################################################################################################
-# GIVE SUGGESTIONS BELOW
-
-
 ##########################START OF THE TEST###############################
 class TestSum(unittest.TestCase):
+
+    # TEST 1. Have a sample file like words, check with the output list whether it contains all the words.
+    # coverage: all-node, all-edge type: i/o
+    # wordDirs: paths to word pool file
+    # a word pool file consists of words delimited by newline
     def test_importWords(self):
         wordLists = ['./test_mock/wordlist_k.txt', './test_mock/wordlist_l.txt', './test_mock/wordlist_t.txt']
-        print(importWords(wordLists))
-        self.assertEqual(importWords(wordLists), [['하나', '둘'], ['one', 'two'], ['เอก', 'โท']])
+        l = importWords(wordLists)
+        self.assertEqual(l, [['하나', '둘'], ['one', 'two'], ['เอก', 'โท']])
 
+    # TEST 2. Remove every string in list which has no .otf or .ttf extension
+    # coverage: all-path, type: i/o
+    def test_removeNonFont(self):
+        # 1-2-6
+        fontList = []
+        l = removeNonFont(fontList)
+        self.assertEqual(l, [])
 
+        # 1-2-3-4-2-6
+        fontList = ['.DS_Store']
+        l = removeNonFont(fontList)
+        self.assertEqual(l, [])
+
+        # 1-2-3-5-6
+        fontList = ['x.ttf']
+        l = removeNonFont(fontList)
+        self.assertEqual(l, ['x.ttf'])
+
+        # 1-2-3-4-5-6:
+        fontList = ['x.otf']
+        l = removeNonFont(fontList)
+        self.assertEqual(l, ['x.otf'])
+
+        # 1-2-3-4-2-3-5-6:
+        fontList = ['.DS_Store', 'x.ttf']
+        l = removeNonFont(fontList)
+        self.assertEqual(l, ['x.ttf'])
+
+        # 1-2-3-4-2-3-4-5-6:
+        fontList = ['.DS_Store', 'x.otf']
+        l = removeNonFont(fontList)
+        self.assertEqual(l, ['x.otf'])
+
+    # TEST 3. Check whether there are such file/directory in the specified path. If there is none, add. Else, leave it.
+    # coverage: node, type: i/o
+    def test_initializePaths(self):
+        pass
+
+    # TEST 4. Import config and convert it into num_of_class (int) and class_mapping (dict)
+    # Coverage: all-path, type: i/o
+    # see utilities/config.txt
+    def import_config(self):
+        pass
+
+    # TEST 5. Get language code from the mapping (dict).
+    # Coverage: edge, type: i/o
+    # see import_config above for mapping format
+    def find_code(self):
+        pass
+
+    # TEST 6. Get the division result of values in each categories in 2 dicts
+    # e.g. dict1 = {'L' : 0.4, 'K' : 0.7}, dict2 = {'L' : 0.1, 'K' : 0.1},
+    # return dict_res = {'L' : 4, 'K' : 7}
+    # Coverage: edge, type: None Exception test, i/o test
+    def mult_dict(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()
