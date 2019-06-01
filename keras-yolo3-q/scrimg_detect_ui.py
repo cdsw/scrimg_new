@@ -55,7 +55,8 @@ class ScrimgDetect_UI(QWidget):
         self.sc = ScrimgDetector(config_path, version, model_path, anchors_path, classes_path, threshold, iou,
                             model_image_size, gpu_num)
 
-    def upload(self): #to test. Exception test: edge, node coverage
+    # to test. Exception test: edge, node coverage
+    def upload(self):
         self.inp_filename, _ = QFileDialog.getOpenFileName(self, "QFileDialog.getOpenFileName()", "", "Image Files (*.png *.jpg)")
         try:
             ph = QPixmap(self.inp_filename)
@@ -67,7 +68,8 @@ class ScrimgDetect_UI(QWidget):
             QMessageBox.about(self, "Error", "Error reading image. Image not loaded.")
             self.btn_detect.setEnabled(False)
 
-    def detect(self): #to test. Exception test: edge, node coverage
+    # to test. Exception test: edge, node coverage
+    def detect(self):
         try:
             self.out_filename = self.sc.detect_from_gui(self.inp_filename)
             ph = QPixmap(self.out_filename)

@@ -404,3 +404,62 @@ Ave. confidence : {'L': 0.956, 'T': 0.8324000000000001, 'K': 0.9268}
 Ave. correctness: {'L': 0.96, 'T': 0.9046913580246914, 'K': 0.96}
 Overall: System correctness = 0.9415637860082305
 
+$
+TESTING RUN # 37 at 2019-05-31 10:13:49.398154
+WITH MODEL VERSION: T0531, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 25, 'T': 25, 'K': 25} with #boxes: 4500
+Total confidence : {'L': 0.75, 'T': 8.140000000000002, 'K': 8.21}
+Total correctness: {'L': 0.3393298059964726, 'T': 4.2513256830857244, 'K': 4.623913536951702}
+Total detected   : {'L': 25, 'T': 25, 'K': 25}
+Ave. confidence : {'L': 0.03, 'T': 0.3256000000000001, 'K': 0.3284}
+Ave. correctness: {'L': 0.013573192239858905, 'T': 0.17005302732342897, 'K': 0.18495654147806806}
+Overall: System correctness = 0.12286092034711867
+
+$
+TESTING RUN # 38 at 2019-05-31 13:27:52.227817
+WITH MODEL VERSION: T0515, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 25, 'T': 25, 'K': 25} with #boxes: 75
+Total confidence : {'L': 20.909999999999997, 'T': 21.159999999999993, 'K': 21.859999999999996}
+Total correctness: {'L': 24.89189189189189, 'T': 24.0, 'K': 25.0}
+Total detected   : {'L': 25, 'T': 24, 'K': 25}
+Ave. confidence : {'L': 0.8363999999999998, 'T': 0.8463999999999997, 'K': 0.8743999999999998}
+Ave. correctness: {'L': 0.9956756756756756, 'T': 0.96, 'K': 1.0}
+Overall: System correctness = 0.9852252252252252
+Enh. correctness: {'L': 0.8327831351351349, 'T': 0.7800422399999997, 'K': 0.8743999999999998}
+Ave. Enh. correctness: 0.8290751250450447
+$
+TESTING RUN # 39 at 2019-05-31 15:42:56.766327
+WITH MODEL VERSION: T0531, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 25, 'T': 25, 'K': 25} with #boxes: 4500
+Total confidence : {'L': 0.81, 'T': 20.859999999999992, 'K': 0.8}
+Total correctness: {'L': 0.33663704716336296, 'T': 10.349225481341035, 'K': 0.3014812663374964}
+Total detected   : {'L': 25, 'T': 25, 'K': 25}
+Ave. confidence : {'L': 0.032400000000000005, 'T': 0.8343999999999997, 'K': 0.032}
+Ave. correctness: {'L': 0.013465481886534519, 'T': 0.4139690192536414, 'K': 0.012059250653499855}
+Overall: System correctness = 0.1464979172645586
+Enh. correctness: {'L': 0.00043628161312371847, 'T': 0.34541574966523825, 'K': 0.0003858960209119954}
+Ave. Enh. correctness: 0.11541264243309131
+$
+TESTING RUN # 40 at 2019-05-31 15:47:44.863474
+WITH MODEL VERSION: T0531, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 25, 'T': 25, 'K': 25} with #boxes: 4500
+Total confidence : {'L': 7.2299999999999995, 'T': 7.0200000000000005, 'K': 1.02}
+Total correctness: {'L': 4.966195783400643, 'T': 4.240965937024962, 'K': 0.673934238801337}
+Total detected   : {'L': 25, 'T': 25, 'K': 25}
+Ave. confidence : {'L': 0.28919999999999996, 'T': 0.2808, 'K': 0.0408}
+Ave. correctness: {'L': 0.1986478313360257, 'T': 0.16963863748099847, 'K': 0.026957369552053478}
+Overall: System correctness = 0.1317479461230259
+Enh. correctness: {'L': 0.05744895282237863, 'T': 0.04763452940466437, 'K': 0.001099860677723782}
+Ave. Enh. correctness: 0.03539444763492226
+$
+TESTING RUN # 41 at 2019-05-31 15:48:25.351926
+WITH MODEL VERSION: T0515, THRESH = 0.1, IOU = 0.35
+Num of images    : {'L': 25, 'T': 25, 'K': 25} with #boxes: 64
+Total confidence : {'L': 22.659999999999997, 'T': 17.160000000000004, 'K': 21.619999999999997}
+Total correctness: {'L': 24.0, 'T': 18.0, 'K': 22.0}
+Total detected   : {'L': 24, 'T': 18, 'K': 22}
+Ave. confidence : {'L': 0.9063999999999999, 'T': 0.6864000000000001, 'K': 0.8647999999999999}
+Ave. correctness: {'L': 0.96, 'T': 0.72, 'K': 0.88}
+Overall: System correctness = 0.8533333333333334
+Enh. correctness: {'L': 0.8353382399999998, 'T': 0.35582976000000005, 'K': 0.6697011199999999}
+Ave. Enh. correctness: 0.6202897066666666

@@ -21,6 +21,9 @@ class DatasetGenerator:
 
         self.draw = False
 
+    ######################################################################################################
+    # to_test. Have a sample file like words, check with the output list whether it contains all the words.
+    # coverage: all-edge and all-node.
     def importWords(self):
         words = []
         for dir in self.wordDirs:
@@ -129,7 +132,6 @@ class DatasetGenerator:
             num = randint(0, len(blurFactor) - 1)
             blurred_image = image.filter(ImageFilter.GaussianBlur(radius=blurFactor[num]))
             return blurred_image
-
 
     def generateAnnotation(self, filename, script_class, topLeft, bottomRight):
         annot_file = open('./dataset/annotation-' + self.version + '.txt', 'a')

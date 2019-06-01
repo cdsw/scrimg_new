@@ -18,13 +18,16 @@ class ScrimgDetector:
         self.iou = iou
         self.yolo = YOLO(version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
+    # to test. I/O test: edge coverage
     @staticmethod
-    def find_code(inp, mapping): #to test. I/O test: edge coverage
+    def find_code(inp, mapping):
         for k, v in mapping.items():
             if str(inp) == str(v[0]) or str(inp) == str(v[1]) or inp == k:
                 return k
+
+    # to test. I/O test, Exception test: edge coverage
     @staticmethod
-    def divide_dict(dict1, dict2): #to test. I/O test, Exception test: edge coverage
+    def divide_dict(dict1, dict2):
         dict_res = {}
         for k, v in dict1.items():
             try:
@@ -33,15 +36,28 @@ class ScrimgDetector:
                 dict_res[k] = 0
         return dict_res
 
-    @staticmethod #to test. node coverage
+    # to test. I/O test, Exception test: edge coverage
+    @staticmethod
+    def mult_dict(dict1, dict2, dict3):
+        dict_res = {}
+        for k, v in dict1.items():
+            try:
+                dict_res[k] = dict1[k] * dict2[k] * dict3[k]
+            except ZeroDivisionError:
+                dict_res[k] = 0
+        return dict_res
+
+    # to test. node coverage
+    @staticmethod
     def sum_dict(dict1):
         summ = 0
         for k, v in dict1.items():
             summ += v
         return summ
 
+    # to test. allpath coverage
     @staticmethod
-    def import_config(path): #to test. 
+    def import_config(path):
         f = open(path, 'r')
         classes = f.readlines()
         num_of_classes = len(classes)
@@ -119,6 +135,9 @@ class ScrimgDetector:
         print(test_num)
         f.close()
 
+        enh_cor = ScrimgDetector.mult_dict(ScrimgDetector.divide_dict(self.total_correctness, self.img_count),
+                                                                        ScrimgDetector.divide_dict(self.total_confidence, self.img_count),
+                                                                        ScrimgDetector.divide_dict(self.detected_image_count, self.img_count))
         log = ''
         log += "TESTING RUN # " + str(test_num) + ' at ' + str(datetime.datetime.now()) + '\n'
         log += 'WITH MODEL VERSION: ' + self.version + ', THRESH = ' + str(self.threshold) \
@@ -130,9 +149,11 @@ class ScrimgDetector:
         log += "Ave. confidence : " + str(ScrimgDetector.divide_dict(self.total_confidence, self.img_count)) + '\n'
         log += "Ave. correctness: " + str(ScrimgDetector.divide_dict(self.total_correctness, self.img_count)) + '\n'
         if ScrimgDetector.sum_dict(self.img_count) != 0:
-            log += "Overall: System correctness = " + str(ScrimgDetector.sum_dict(self.total_correctness) / ScrimgDetector.sum_dict(self.img_count)) + '\n\n'
+            log += "Overall: System correctness = " + str(ScrimgDetector.sum_dict(self.total_correctness) / ScrimgDetector.sum_dict(self.img_count)) + '\n'
         else:
-            log += "Overall: System correctness = 0 \n\n"
+            log += "Overall: System correctness = 0 \n"
+        log += "Enh. correctness: " + str(enh_cor) + '\n'
+        log += "Ave. Enh. correctness: " + str(ScrimgDetector.sum_dict(enh_cor) / 3) + '\n'
 
         f = open('./utilities/logs.txt', 'a+')
         print(log)
@@ -175,6 +196,7 @@ if __name__ == "__main__":
     gpu_num= 1
     config_path = "./utilities/config.txt"
     path = "./dataset/output/"
+    #path = "./dataset/paper-test/"
     sc = ScrimgDetector(config_path, version, model_path, anchors_path, classes_path, threshold, iou, model_image_size, gpu_num)
 
     sc.detect_img_bulk(path)

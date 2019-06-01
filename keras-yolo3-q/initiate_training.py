@@ -46,7 +46,7 @@ class TrainingInitiator:
         rmtree(logdir)
 
 if __name__ == "__main__":
-    version = "T0518"
+    version = "T0531"
     #Generator
     generator = gen.DatasetGenerator(version)
 
