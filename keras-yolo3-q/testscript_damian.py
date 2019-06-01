@@ -118,5 +118,6 @@ class TestSum(unittest.TestCase):
         self.assertEqual(importWords(wordLists), [['하나', '둘'], ['one', 'two'], ['เอก', 'โท']])
 
 
+
 if __name__ == '__main__':
     unittest.main()
