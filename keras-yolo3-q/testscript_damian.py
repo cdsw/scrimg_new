@@ -1,3 +1,4 @@
+import shutil
 import unittest
 
 import os
@@ -34,7 +35,7 @@ def importWords(wordDirs):
 def removeNonFont(list):
     outList = []
     for font in list:
-        if font[-4:] == ".otf" or font[-4:] == ".ttf":
+        if font[-4:] == ".ttf" or font[-4:] == ".otf":
             outList.append(font)
     return outList
 
@@ -42,26 +43,26 @@ def removeNonFont(list):
 # TEST 3. Check whether there are such file/directory in the specified path. If there is none, add. Else, leave it.
 # coverage: node, type: i/o
 def initializePaths():
-    if not os.path.exists("./dataset/output/"):
-        os.makedirs("./dataset/output/")
+    if not os.path.exists("./test_mock/dataset/output/"):
+        os.makedirs("./test_mock/dataset/output/")
 
-    if not os.path.exists("./dataset/filelist.txt"):
-        open("./dataset/filelist.txt", "a").close()
+    if not os.path.exists("./test_mock/dataset/filelist.txt"):
+        open("./test_mock/dataset/filelist.txt", "a").close()
 
-    if not os.path.exists("./dataset/imgcount.txt"):
-        newfile = open("./dataset/imgcount.txt", "a")
+    if not os.path.exists("./test_mock/dataset/imgcount.txt"):
+        newfile = open("./test_mock/dataset/imgcount.txt", "a")
         newfile.write("0")
         newfile.close()
 
-    if not os.path.exists("./dataset/fonts/"):
-        os.makedirs("./dataset/fonts/")
+    if not os.path.exists("./test_mock/dataset/fonts/"):
+        os.makedirs("./test_mock/dataset/fonts/")
 
-    if not os.path.exists("./dataset/words/latnWords.txt"):
-        open("./dataset/latnWords.txt", "a").close()
-    if not os.path.exists("./dataset/words/thaiWords.txt"):
-        open("./dataset/thaiWords.txt", "a").close()
-    if not os.path.exists("./dataset/words/kornWords.txt"):
-        open("./dataset/kornWords.txt", "a").close()
+    if not os.path.exists("./test_mock/dataset/latnWords.txt"):
+        open("./test_mock/dataset/latnWords.txt", "a").close()
+    if not os.path.exists("./test_mock/dataset/thaiWords.txt"):
+        open("./test_mock/dataset/thaiWords.txt", "a").close()
+    if not os.path.exists("./test_mock/dataset/kornWords.txt"):
+        open("./test_mock/dataset/kornWords.txt", "a").close()
 
 
 ######################################################################################################
@@ -79,6 +80,7 @@ def import_config(path):
     for c in classes:
         c = c.split()
         class_mapping[c[2]] = [c[0], int(c[1])]  # eg 'L' : 'latin' 0
+    f.close()
     return num_of_classes, class_mapping
 
 
@@ -96,6 +98,7 @@ def find_code(inp, mapping):
 # e.g. dict1 = {'L' : 0.4, 'K' : 0.7}, dict2 = {'L' : 0.1, 'K' : 0.1},
 # return dict_res = {'L' : 4, 'K' : 7}
 # Coverage: edge, type: None Exception test, i/o test
+# Preassumption: dict1, dict2 have the same length
 def divide_dict(dict1, dict2):
     dict_res = {}
     for k, v in dict1.items():
@@ -104,6 +107,7 @@ def divide_dict(dict1, dict2):
         except ZeroDivisionError:
             dict_res[k] = 0
     return dict_res
+
 
 ##########################START OF THE TEST###############################
 class TestSum(unittest.TestCase):
@@ -153,26 +157,85 @@ class TestSum(unittest.TestCase):
     # TEST 3. Check whether there are such file/directory in the specified path. If there is none, add. Else, leave it.
     # coverage: node, type: i/o
     def test_initializePaths(self):
-        pass
+        # Case 1: 1-3-5-9-11-13-15-17
+        if os.path.exists('./test_mock/dataset'):
+            shutil.rmtree('./test_mock/dataset')
+        os.mkdir('./test_mock/dataset')
+        initializePaths()
+        paths = ["./test_mock/dataset/output/", "./test_mock/dataset/filelist.txt", "./test_mock/dataset/imgcount.txt",
+                 "./test_mock/dataset/fonts/", "./test_mock/dataset/latnWords.txt", "./test_mock/dataset/thaiWords.txt",
+                 "./test_mock/dataset/kornWords.txt", "./test_mock/dataset/kornWords.txt"]
+        for p in paths:
+            self.assertTrue(os.path.exists(p))
+
+        # Case 2: 1-...-17
+        initializePaths()
+        for p in paths:
+            self.assertTrue(os.path.exists(p))
 
     # TEST 4. Import config and convert it into num_of_class (int) and class_mapping (dict)
     # Coverage: all-path, type: i/o
     # see utilities/config.txt
-    def import_config(self):
-        pass
+    def test_import_config(self):
+        # Case 1: no class
+        s = import_config('./test_mock/config_empty.txt')
+        self.assertEqual(s, (0, dict()))
+
+        # Case 2: 3 classes
+        s = import_config('./test_mock/config.txt')
+        len_ = 3
+        dict_ = {'L': ['latin', 0], 'T': ['thai', 1], 'K': ['korean', 2]}
+        self.assertEqual(s, (len_, dict_))
 
     # TEST 5. Get language code from the mapping (dict).
-    # Coverage: edge, type: i/o
+    # Coverage: edge, type: i/o, exception
     # see import_config above for mapping format
-    def find_code(self):
-        pass
+    def test_find_code(self):
+        len_, mapping = import_config('./test_mock/config.txt')
+
+        # Case 1: 1-2-3-4-1-6-7
+        inp_ = 'latin'
+        dict_ = {'K': ['korean', 2]}
+        self.assertRaises(ValueError, find_code, inp_, dict_)
+
+        # Case 2: 1-2-3-4-5
+        inp_ = 'K'
+        dict_ = {'K': ['korean', 2]}
+        self.assertEqual(find_code(inp_, dict_), 'K')
+
+        # Case 3: 1-2-3-5
+        inp_ = 2
+        dict_ = {'K': ['korean', 2]}
+        self.assertEqual(find_code(inp_, dict_), 'K')
+
+        # Case 4: 1-2-5
+        inp_ = 'korean'
+        dict_ = {'K': ['korean', 2]}
+        self.assertEqual(find_code(inp_, dict_), 'K')
 
     # TEST 6. Get the division result of values in each categories in 2 dicts
     # e.g. dict1 = {'L' : 0.4, 'K' : 0.7}, dict2 = {'L' : 0.1, 'K' : 0.1},
     # return dict_res = {'L' : 4, 'K' : 7}
     # Coverage: edge, type: None Exception test, i/o test
-    def mult_dict(self):
-        pass
+    # Preassumption: dict1, dict2 have the same length
+    def test_divide_dict(self):
+        # 1-2-5
+        dict1, dict2 = {}, {}
+        dict_res = {}
+        result_ = divide_dict(dict1, dict2)
+        self.assertEqual(dict_res, result_)
+
+        # 1-2-3-4-2-5
+        dict1, dict2 = {'L': 0.3}, {'L': 0}
+        dict_res = {'L': 0}
+        result_ = divide_dict(dict1, dict2)
+        self.assertEqual(dict_res, result_)
+
+        # 1-2-3-6-2-5
+        dict1, dict2 = {'L': 4}, {'L': 2}
+        dict_res = {'L': 2}
+        result_ = divide_dict(dict1, dict2)
+        self.assertEqual(dict_res, result_)
 
 if __name__ == '__main__':
     unittest.main()
