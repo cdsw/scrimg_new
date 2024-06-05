@@ -1,24 +1,9 @@
-scrimg_new
+Scrimg: Identifying Writing Systems using Object Detection Neural Network is an exploration-driven project which aims to explore the possibilities of using image recognition and deep learning to identify the script in which blocks of texts are written. The project uses the YOLO v3 architecture, which is one of convolutional neural network techniques, and a web application as its user interface. Scope of the project and desired results were established, and model for implementation was selected after adequate research.
 
-# Scrimg Web
+Writing system identiﬁcation systems have the beneﬁt of giving people the ability to tell which script the text they are looking at belongs to, so that they may get help translating in the correct language. Scrimg, while only limited to detecting the Latin, Thai, and Korean (Hangul) scripts, serves its purpose as a proof-of-concept on how such a system may be developed, and can be further expanded upon.
+Scrimg is divided into two major systems. The back-end part is called as classiﬁer agent (CA), a part which handles dataset creation, model training and back-end image detection. Another part is named as user interface (UI), which provides front-end image detection. The dataset consists of images containing a line of text in one writing system which meets Scrimg’s speciﬁcation. Such images are acquired and labelled auto-
+matically using our dataset generator program. This combination of images and label annotations to be trained on a YOLO v3-tiny model. The training process produces trained Keras and Tensorﬂow.js models. 
 
-> A vue project
+The original user interface (UI) was supposed to be a web-based interface which can be accessed online. This approach failed due to some back-end and front-end model incompatibilities which we had ﬁgured out at the end of the integration part. At the end, a PyQt5-based oﬄine interface was introduced. Along the development stage, we conducted tests on trained models by running detection on generated images speciﬁed by the corresponding model. Model T0515 yielded the highest enhanced correctness value out of all models tested, at a mean of 77.5% (Latin: 85.1%, Thai: 64.5%, Korean: 84.2%), which satisﬁes our expectation. On the other hand, despite ﬁnishing the entire web UI layout, we were unsuccessful in loading the model into the web framework. This situation forced us to downgrade our UI into a simple PyQt5 application. This project has some potential to be expanded further, from allowing more text detection range to classifying characters based on their writing system. Another possible advancement is to do glyph segmentation and classiﬁcation in an unknown text.
 
-### Build setup
-
-serve with hot reload at localhost:8080
-```
-yarn serve
-# or
-npm run dev
-```
-For a detailed explanation on how things work, check out the [guide][1] and [docs for vue-loader][2].
-
-[1]: http://vuejs-templates.github.io/webpack/
-[2]: https://vue-loader-v14.vuejs.org/en/
-
-### Referrence
-
-[Image Uploader Tutorial][11]
-
-[11]: https://medium.freecodecamp.org/how-to-build-a-flexible-image-uploader-component-using-vue-js-2-0-5ee7fc77516
+This project is done by Damian Satya Wibowo, Kasamabhorn Suparerkrat, Punn Ouilapan, and Shouh Yann Mo.
